@@ -2,11 +2,11 @@
 
 // Console.WriteLine("Hello, World!");
 
-var age = 15;  // sets Age
-var name = "Tim"; // Sets Name
+var age = 15;  // sets age
+var name = "Tim"; // Sets name
 
-var Person = name + ", "+ age;  //combines Variables
-Console.WriteLine(Person); //prints Variables age and name
+var person = name + ", "+ age;  //combines Variables
+Console.WriteLine(person); //prints variables age and name
 
 
 //Aufgabe 3
@@ -16,7 +16,7 @@ double y = x; */
 
 //Beispiel 2:
 double x = 3.2;
-int y = (int) x;       //Explicit casting; muss manuel von double auf int gewecheselt werden
+int y = (int) x;       //explicit casting; muss manuel von double auf int gewecheselt werden
 
 // Aufgabe 4 siehe Conf
 
