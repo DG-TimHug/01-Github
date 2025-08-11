@@ -27,3 +27,5 @@ const double e = 2.718281;
 const float PI = 3.141592f;
 var numbers = "e = " + e + ", " + "Pi = " + PI;
 Console.WriteLine(numbers);
+
+//Aufgabe 6 Siehe Conf
