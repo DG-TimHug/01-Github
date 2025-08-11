@@ -1,0 +1,15 @@
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\bin\Debug\net9.0\02-Daten Typen und Variablen.exe
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\bin\Debug\net9.0\02-Daten Typen und Variablen.deps.json
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\bin\Debug\net9.0\02-Daten Typen und Variablen.runtimeconfig.json
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\bin\Debug\net9.0\02-Daten Typen und Variablen.dll
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\bin\Debug\net9.0\02-Daten Typen und Variablen.pdb
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.AssemblyInfoInputs.cache
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.AssemblyInfo.cs
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.csproj.CoreCompileInputs.cache
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.sourcelink.json
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.dll
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\refint\02-Daten Typen und Variablen.dll
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.pdb
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\02-Daten Typen und Variablen.genruntimeconfig.cache
+C:\Development\Git Projects\01-Github\02 Daten Typen und Variablen\02-Daten Typen und Variablen\02-Daten Typen und Variablen\obj\Debug\net9.0\ref\02-Daten Typen und Variablen.dll
