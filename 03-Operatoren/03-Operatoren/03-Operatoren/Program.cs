@@ -51,10 +51,7 @@ class Program
                 Console.WriteLine(" yes");
             }
         }
-        //Aufgabe 5
-        
-        
-        
+
     }
     
 }   
