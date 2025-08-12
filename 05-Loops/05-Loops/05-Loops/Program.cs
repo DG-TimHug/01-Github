@@ -45,9 +45,27 @@ class Program
                                                                                             */
         
         //Aufgabe 5
-        
-        
+        Console.WriteLine("Quiz time: Approximately how many tunnels does Switzerland have?");
+        Console.WriteLine("Is it...");
+        Console.WriteLine("A: 700 Tunnels?");
+        Console.WriteLine("B: 1000 Tunnels?");
+        Console.WriteLine("C: 1300 Tunnels?");
+        Console.WriteLine("D: 1500 Tunnels?");
+        Console.WriteLine("E: 1700 Tunnenls?");
+        var userInput = Console.ReadLine();
+        var a = false;
+        var b = true;
+        var c = false;
+        var d = false;
+        var e = false;
+        if (userInput == b)
+        while (userInput != true)
+        {
+            Console.WriteLine("Please try again");
         }
+
+
+    }
       
     }
 }
