@@ -65,8 +65,10 @@ class Program
         Console.WriteLine("Your numbers were " + userThirdNumStr + " and " + UserFourthNumStr + ".");
         int.TryParse(userThirdNumStr, out var userThirdNum);
         int.TryParse(UserFourthNumStr, out var userFourthNum);
-        
-        var resultStr = userThirdNum == userFourthNum ? "Your numbers are the same. Hooray!" : "Your numbers are different from each other. :(";
+
+        var resultStr = userThirdNum == userFourthNum
+            ? "Your numbers are the same. Hooray!"
+            : "Your numbers are different from each other. :(";
         Console.WriteLine(resultStr);
                                                                                             */
 
