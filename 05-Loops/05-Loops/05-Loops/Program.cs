@@ -5,16 +5,13 @@ class Program
     static void Main(string[] args)
     {
        //Aufgabe 1
-       var num = 1;
-        do
-        {
-            var result1 = num + num;
-            Console.WriteLine(num);
-            num++;
+       var result = 0;
+       for (int num = 1; num <= 10; num++)
+       {
+           result += num;
+       }
 
-            Console.WriteLine(result1);
-        } while (num < 10);
-
+       Console.WriteLine("The sum of the numbers 1-10 is " + result + ".");
 
     }
 }
