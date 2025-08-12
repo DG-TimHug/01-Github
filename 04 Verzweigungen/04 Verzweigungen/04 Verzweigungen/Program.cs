@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Drawing;
 
 namespace _04_Verzweigungen;
 
@@ -31,23 +32,32 @@ class Program
                 Console.WriteLine("Your numbers are not multiples of each other.");
             }
                                                                                             */
+              
+            //Aufgabe 3                                                                                
         Console.WriteLine("Choose a Color: 1 = Red, 2 = Blue, 3 = Green, 4 = Yellow");
         var input = Console.ReadLine();
         int.TryParse(input, out var output);
-        var red = 1;
-        var blue = 2;
-        var green = 3;
-        var yellow = 4;
-        for (var num = 1; num <= 4; num++)
+
+        int system_num = output;
+        switch (system_num)
         {
-            if (output != 4)
-            {
-                Console.WriteLine("?");
-            }
-            else
-            {
-                Console.WriteLine("saf");
-            }
+            case 1:
+                Console.WriteLine("Red");
+                break;
+            case 2:
+                Console.WriteLine("Blue");
+                break;
+            case 3:
+                Console.WriteLine("Green");
+                break;
+            case 4:
+                Console.WriteLine("Yellow");
+                break;
+            default:
+                Console.WriteLine("Erorr 404 Not Found.");
+                break;
+            
         }
+        
     }
 }
