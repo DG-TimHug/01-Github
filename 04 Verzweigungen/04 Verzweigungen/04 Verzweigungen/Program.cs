@@ -37,9 +37,8 @@ class Program
         Console.WriteLine("Choose a Color: 1 = Red, 2 = Blue, 3 = Green, 4 = Yellow");
         var userInputStr = Console.ReadLine();
         int.TryParse(userInputStr, out var userInput);
-
-        int userColorSelection = userInput;
-        switch (userColorSelection)
+        
+        switch (userInput)
         {
             case 1:
                 Console.WriteLine("Red");
