@@ -23,8 +23,26 @@ class Program
         Console.WriteLine("The sum of all of the even numbers 1-10 is " + result + ".");
                                                                                             */
         //Aufgabe 4
+        
+        Console.WriteLine("For the number you enter a Pyramid that size will be shown...");
+        var userFirstNumStr = Console.ReadLine();
+        Console.WriteLine("Your pyramid size is " + userFirstNumStr + ".");
+        int.TryParse(userFirstNumStr, out var userFirstNum);
+        var pyramid = "*";
+        for (int levels = 1; levels <= userFirstNum; levels++)
+        {
+            Console.WriteLine(pyramid);
+            for (int level = 1; level <= levels; level++)
+            {
+                Console.WriteLine("*"*2);
+            }
 
-        var pyramid = "   *";
-        Console.WriteLine(pyramid);
+        }
+        
+        
+       // var pyramid= "*";
+       // Console.WriteLine(pyramid);
+
+       // var printnout = userFirstNum * pyramid;
     }
 }
