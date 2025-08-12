@@ -9,25 +9,24 @@ class Program
 
         // Aufgabe 1
         
-        /*
-        var a = 7;
-        var b = (a + a) * 5;
-        Console.WriteLine("Answer = " + b);
+        
+        var rndm_num = 7;                               //rndm_num weil es ist eine Random Number. Ich habe 7 als beispiel genommen jede andere Zahl geht auch
+        var rndm_num2 = (rndm_num + rndm_num) * 5;
+        Console.WriteLine("Answer = " + rndm_num2);
 
         // Aufgabe 2
         Console.WriteLine("Give me 2 numbers that can be divided by eachother...");
-        var c = Console.ReadLine();
-        var d = Console.ReadLine();
-        Console.WriteLine("Your numbers were " + c + " and " + d);
-        int.TryParse(c, out var e);
-        int.TryParse(d, out var f);
+        var user_num1 = Console.ReadLine();
+        var user_num2 = Console.ReadLine();
+        Console.WriteLine("Your numbers were " + user_num1 + " and " + user_num1);
+        int.TryParse(user_num1, out var user_num1_trans);
+        int.TryParse(user_num2, out var user_num2_trans);
 
-        var result = (e / f);
-        var i = e % f;
+        var result = (user_num1_trans / user_num2_trans);
+        var i = user_num1_trans % user_num2_trans;
         Console.WriteLine("The answer is " + result + ". " + i + " remain.");
         
         
-        */
         //Aufgabe 3
         // Was ist das Ergebnis der beiden Beispielen und wieso unterscheiden sich diese? Einfache Mathematik. Punkt vor strich. Bei a wird 3 + 10 (2*5) gerechnet. Bei b wird 5 (3+2) * 5 gerechnet
         /*
