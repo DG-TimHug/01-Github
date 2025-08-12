@@ -7,39 +7,39 @@ class Program
 {
     static void Main(string[] args)
     {
-        /* //Aufgabe 1
-            Console.WriteLine("Enter 2 numbers...");
-            var a = Console.ReadLine();
-            var b = Console.ReadLine();
-            Console.WriteLine("Your numbers were " + a + " and " + b + ".");
-            int.TryParse(a, out var c);
-            int.TryParse(b, out var d);
+        /*    //Aufgabe 1
+           Console.WriteLine("Enter 2 numbers...");
+           var userFirstNumStr = Console.ReadLine();
+           var UserSecondNumStr = Console.ReadLine();
+           Console.WriteLine("Your numbers were " + userFirstNumStr + " and " + UserSecondNumStr + ".");
+           int.TryParse(userFirstNumStr, out var userFirstNum);
+           int.TryParse(UserSecondNumStr, out var userSecondNum);
 
-            if (c == d) {
-                Console.WriteLine("Your numbers are the same. Hooray!");
-            }
-            else {
-                Console.WriteLine("Your numbers are different from each other. :(");
-            }
-            //Aufgabe 2
-            var result = c % d;
-            if (result == 0)
-            {
-                Console.WriteLine("Your numbers are multiples of each other.");
-            }
-            else
-            {
-                Console.WriteLine("Your numbers are not multiples of each other.");
-            }
-                                                                                            */
-              
-            //Aufgabe 3                                                                                
+           if (userFirstNum == userSecondNum) {
+               Console.WriteLine("Your numbers are the same. Hooray!");
+           }
+           else {
+               Console.WriteLine("Your numbers are different from each other. :(");
+           }
+           //Aufgabe 2
+           var result = userFirstNum % userSecondNum;
+           if (result == 0)
+           {
+               Console.WriteLine("Your numbers are multiples of each other.");
+           }
+           else
+           {
+               Console.WriteLine("Your numbers are not multiples of each other.");
+           }
+                                                                                           */
+        /*
+        //Aufgabe 3                                                                                
         Console.WriteLine("Choose a Color: 1 = Red, 2 = Blue, 3 = Green, 4 = Yellow");
-        var input = Console.ReadLine();
-        int.TryParse(input, out var output);
+        var userInputStr = Console.ReadLine();
+        int.TryParse(userInputStr, out var userInput);
 
-        int system_num = output;
-        switch (system_num)
+        int userColorSelection = userInput;
+        switch (userColorSelection)
         {
             case 1:
                 Console.WriteLine("Red");
@@ -54,10 +54,16 @@ class Program
                 Console.WriteLine("Yellow");
                 break;
             default:
-                Console.WriteLine("Erorr 404 Not Found.");
+                Console.WriteLine("Error 404 Not Found.");
                 break;
-            
         }
-        
+                                                                                            */
+        //Aufgabe 4
+
+
+
+
+
+
     }
 }
