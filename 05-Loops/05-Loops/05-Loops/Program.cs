@@ -61,21 +61,19 @@ class Program
             Console.WriteLine("Please answer with the amount of tunnels.");
             int userAnswer; //declares that userAnswer exists
             var numbAttempts = 0;
-            if (int.TryParse(Console.ReadLine(),
-                    out userAnswer)) //If the Console can be read and converted into integer continue
+            if (int.TryParse(Console.ReadLine(), out userAnswer)) //If the Console can be read and converted into integer continue
             {
                 numbAttempts++;
                 while (userAnswer != 1300) //while the answer from the user isn't 1300 run the script below
                 {
-                    Console.WriteLine("Please try again");
-                    int.TryParse(Console.ReadLine(),
-                        out userAnswer); //reads and converts user input and checks if while condition is still false
+                    Console.WriteLine("That is incorrect. Please try again.");
+                    int.TryParse(Console.ReadLine(), out userAnswer); //reads and converts user input and checks if while condition is still false
                     numbAttempts++; //counts up number of attempts needed
                 }
 
                 Console.WriteLine(
                     "Correct! The answer was 1300!"); // once while loop is complete shows user the correct answer
-                Console.WriteLine($"You guessed Correctly after " +
+                Console.WriteLine($"You guessed correctly after " +
                                   $"{numbAttempts} guesses!");
             }
             else
@@ -83,7 +81,7 @@ class Program
                 //if User input could not be converted into string -> ends program and shows no number was entered
                 Console.WriteLine("No Number was entered.");
             }
-                                                                                                                    */
+                                                                                    */                                                                          
             //Aufgabe 6 im Conf
             
     }
