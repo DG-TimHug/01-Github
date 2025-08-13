@@ -70,6 +70,6 @@ class Program
         else {                                                                 //if User input could not be converted into string -> ends program and shows no number was entered
             Console.WriteLine("No Number was entered.");
         }
-
+        //Aufgabe 6 im Conf
     }
 }
