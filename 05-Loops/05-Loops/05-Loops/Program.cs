@@ -71,10 +71,8 @@ class Program
                     numbAttempts++; //counts up number of attempts needed
                 }
 
-                Console.WriteLine(
-                    "Correct! The answer was 1300!"); // once while loop is complete shows user the correct answer
-                Console.WriteLine($"You guessed correctly after " +
-                                  $"{numbAttempts} guesses!");
+                Console.WriteLine("Correct! The answer was 1300!"); // once while loop is complete shows user the correct answer
+                Console.WriteLine($"You guessed correctly after {numbAttempts} guesses!");
             }
             else
             {
