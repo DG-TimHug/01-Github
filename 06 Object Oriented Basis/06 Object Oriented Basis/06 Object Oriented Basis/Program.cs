@@ -70,13 +70,13 @@ abstract class Program
             Console.WriteLine("What do you want to do today?");
             Console.WriteLine("1 = Make Changes to Counters");
             Console.WriteLine("2 = View Values of Counters");
-            int.TryParse(Console.ReadLine(), out int selectCounter1);
+            int.TryParse(Console.ReadLine(), out var selectedOption);
             
-            switch (selectCounter1)
+            switch (selectedOption)
             {
                 case 1:
                     Console.WriteLine("Enter a number");
-                    if (int.TryParse(Console.ReadLine(), out int userValue))
+                    if (int.TryParse(Console.ReadLine(), out var userValue))
                     {
                 
                     }
@@ -88,8 +88,8 @@ abstract class Program
                     Console.WriteLine("Select a counter you want to add/subtract your number from.");
                     Console.WriteLine("1 = Make Changes to Counter 1");
                     Console.WriteLine("2 = Make Changes to Counter 2");
-                    int.TryParse(Console.ReadLine(), out int selectCounter2);
-                    switch (selectCounter2)
+                    int.TryParse(Console.ReadLine(), out var selectCounter);
+                    switch (selectCounter)
                     {
                         case 1:
                         {
@@ -97,7 +97,7 @@ abstract class Program
                             Console.WriteLine("Enter a number to select your operation");
                             Console.WriteLine("1 = Addition");
                             Console.WriteLine("2 = Subtraction");
-                            int.TryParse(Console.ReadLine(), out int operation);
+                            int.TryParse(Console.ReadLine(), out var operation);
                             switch (operation)
                             {
                                 case 1:
@@ -121,7 +121,7 @@ abstract class Program
                             Console.WriteLine("Enter a number to select your operation");
                             Console.WriteLine("1 = Addition");
                             Console.WriteLine("2 = Subtraction");
-                            int.TryParse(Console.ReadLine(), out int operation);
+                            int.TryParse(Console.ReadLine(), out var operation);
                             switch (operation)
                             {
                                 case 1:
@@ -147,7 +147,7 @@ abstract class Program
                         Console.WriteLine("Select a counter you want to view.");
                         Console.WriteLine("1 = View Counter 1");
                         Console.WriteLine("2 = View Counter 2");
-                        int.TryParse(Console.ReadLine(), out int viewCounter);
+                        int.TryParse(Console.ReadLine(), out var viewCounter);
                         switch(viewCounter)
                         {   
                             case 1:
@@ -173,7 +173,6 @@ abstract class Program
                 default:
                 {
                     Console.WriteLine("Please select a valid number.");
-                    continue;
                     break;
                 }
             }
@@ -182,9 +181,9 @@ abstract class Program
     }
 
 
-    public class Counter 
+    private class Counter 
    { 
-       public int Count = 0;
+       public int Count;
        
        public void AddToCounter(int userNum)
        {
