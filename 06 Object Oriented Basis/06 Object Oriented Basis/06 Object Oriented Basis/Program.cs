@@ -189,7 +189,6 @@ abstract class Program
        {
            Count += userNum;
        }
-
        public void SubtractFromCounter(int userNum)
        {
            Count -= userNum;
