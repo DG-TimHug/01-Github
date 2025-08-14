@@ -172,7 +172,7 @@ abstract class Program
 
                 default:
                 {
-                    Console.WriteLine("Please select a vaild number.");
+                    Console.WriteLine("Please select a valid number.");
                     continue;
                     break;
                 }
@@ -188,12 +188,12 @@ abstract class Program
        
        public void AddToCounter(int userNum)
        {
-           Count = Count + userNum;
+           Count += userNum;
        }
 
        public void SubtractFromCounter(int userNum)
        {
-           Count = Count - userNum;
+           Count -= userNum;
        }
        
    }
