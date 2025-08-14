@@ -1,8 +1,9 @@
-﻿using System.Runtime.InteropServices.JavaScript;
+﻿using System.Numerics;
+using System.Runtime.InteropServices.JavaScript;
 
 namespace _06_Object_Oriented_Basis;
 
-class Program
+abstract class Program
 {
     static void Main(string[] args)
     {
@@ -64,32 +65,30 @@ class Program
         }
                                     */
         //Klassen Aufgabe 3 (Aufgaben 1/2 bereits während Recherche gelöst. Siehe Conf für mehr info
-        Console.WriteLine("Enter any number that you want to Subtract from or add to the number 17");
-        int.TryParse(Console.ReadLine(), out int userInput);
-
-
-
-
+        Console.WriteLine("Enter 2 numbers. We will add them to each other and also subtract them from each other");
+        int.TryParse(Console.ReadLine(), out int userNum);
+        var counter1 = new Counter();
+        Console.WriteLine(counter1.Count);
+        int count = counter1.Count;
 
     }
-    
 
-    public class Counter
+
+    public class Counter 
        {
-           public int Count { get; set; }
-
-           private static int Addition(int userInput)
+           /*int.TryParse(Console.ReadLine(), out int userNum1);
+           int.TryParse(Console.ReadLine(), out int userNum2); */
+           public int Count = 0;
+           
+           public void AddToCounter(int userNum)
            {
-               var resultAddition = userInput + 17;
-               return resultAddition;
+               var additionToCount = Count + userNum;
            }
 
-           private static int Subtraction(int userInput)
+           public void SubtractFromCounter(int userNum)
            {
-               var resultSubtraction = userInput - 17;
-               return resultSubtraction;
+               var subtractionToCount = userNum - Count;
            }
        }
-        
     }                
 
