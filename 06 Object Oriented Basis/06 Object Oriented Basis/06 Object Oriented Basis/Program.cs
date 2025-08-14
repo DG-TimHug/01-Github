@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using System.Runtime.InteropServices.JavaScript;
-
-namespace _06_Object_Oriented_Basis;
+﻿namespace _06_Object_Oriented_Basis;
 
 abstract class Program
 {
@@ -65,30 +62,140 @@ abstract class Program
         }
                                     */
         //Klassen Aufgabe 3 (Aufgaben 1/2 bereits während Recherche gelöst. Siehe Conf für mehr info
-        Console.WriteLine("Enter 2 numbers. We will add them to each other and also subtract them from each other");
-        int.TryParse(Console.ReadLine(), out int userNum);
-        var counter1 = new Counter();
-        Console.WriteLine(counter1.Count);
-        int count = counter1.Count;
+        var userCounter1 = new Counter();
+        var userCounter2 = new Counter();
+        
+        while (true)
+        {
+            Console.WriteLine("What do you want to do today?");
+            Console.WriteLine("1 = Make Changes to Counters");
+            Console.WriteLine("2 = View Values of Counters");
+            int.TryParse(Console.ReadLine(), out int selectCounter1);
+            
+            switch (selectCounter1)
+            {
+                case 1:
+                    Console.WriteLine("Enter a number");
+                    if (int.TryParse(Console.ReadLine(), out int userValue))
+                    {
+                
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error 404. Number not found. Try again");
+                        continue;
+                    }
+                    Console.WriteLine("Select a counter you want to add/subtract your number from.");
+                    Console.WriteLine("1 = Make Changes to Counter 1");
+                    Console.WriteLine("2 = Make Changes to Counter 2");
+                    int.TryParse(Console.ReadLine(), out int selectCounter2);
+                    switch (selectCounter2)
+                    {
+                        case 1:
+                        {
+                            Console.WriteLine("Counter 1 selected");
+                            Console.WriteLine("Enter a number to select your operation");
+                            Console.WriteLine("1 = Addition");
+                            Console.WriteLine("2 = Subtraction");
+                            int.TryParse(Console.ReadLine(), out int operation);
+                            switch (operation)
+                            {
+                                case 1:
+                                    userCounter1.AddToCounter(userValue);
+                                    Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
+                                    break;
+                                case 2:
+                                    userCounter1.SubtractFromCounter(userValue);
+                                    Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
+                                    break;
+                                default:
+                                    Console.WriteLine("Error 404 Operation not found. Please try again.");
+                                    break;
+                            }
+
+                            break;
+                        }
+                        case 2:
+                        {
+                            Console.WriteLine("Counter 2 selected");
+                            Console.WriteLine("Enter a number to select your operation");
+                            Console.WriteLine("1 = Addition");
+                            Console.WriteLine("2 = Subtraction");
+                            int.TryParse(Console.ReadLine(), out int operation);
+                            switch (operation)
+                            {
+                                case 1:
+                                    userCounter2.AddToCounter(userValue);
+                                    Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
+                                    break;
+                                case 2:
+                                    Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
+                                    userCounter2.SubtractFromCounter(userValue);
+                                    break;
+                                default:
+                                    Console.WriteLine("Error 404 Operation not found. Please try again.");
+                                    break;
+                            }
+
+                            break;
+                        }
+                    }
+
+                    break;
+                case 2:
+                    {
+                        Console.WriteLine("Select a counter you want to view.");
+                        Console.WriteLine("1 = View Counter 1");
+                        Console.WriteLine("2 = View Counter 2");
+                        int.TryParse(Console.ReadLine(), out int viewCounter);
+                        switch(viewCounter)
+                        {   
+                            case 1:
+                            {
+                                Console.WriteLine($"Current Value in Counter 1 is **{userCounter1.Count}**");
+                                break;
+                            }
+                            case 2:
+                            {
+                                Console.WriteLine($"Current Value in Counter 2 is **{userCounter2.Count}**");
+                                break;
+                            }
+                            default:
+                            {
+                                Console.WriteLine("Error 404 Counter not found");
+                                break;
+                            }
+                        }
+
+                        break;
+                    }
+
+                default:
+                {
+                    Console.WriteLine("Please select a vaild number.");
+                    continue;
+                    break;
+                }
+            }
+        }
 
     }
 
 
     public class Counter 
+   { 
+       public int Count = 0;
+       
+       public void AddToCounter(int userNum)
        {
-           /*int.TryParse(Console.ReadLine(), out int userNum1);
-           int.TryParse(Console.ReadLine(), out int userNum2); */
-           public int Count = 0;
-           
-           public void AddToCounter(int userNum)
-           {
-               var additionToCount = Count + userNum;
-           }
-
-           public void SubtractFromCounter(int userNum)
-           {
-               var subtractionToCount = userNum - Count;
-           }
+           Count = Count + userNum;
        }
-    }                
+
+       public void SubtractFromCounter(int userNum)
+       {
+           Count = Count - userNum;
+       }
+       
+   }
+}                
 
