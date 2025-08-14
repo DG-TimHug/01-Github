@@ -11,7 +11,7 @@ namespace Debugging_Task_3
         {
             List<Char> characters = new List<Char>();
             characters.InsertRange(0, new Char[] {'a', 'b', 'c', 'd', 'e', 'f'});
-            for (int ctr = 0; ctr <= characters.Count; ctr++)
+            for (int ctr = 0; ctr < characters.Count; ctr++)
                 Console.Write("'{0}'    ", characters[ctr]);
         }
     }
