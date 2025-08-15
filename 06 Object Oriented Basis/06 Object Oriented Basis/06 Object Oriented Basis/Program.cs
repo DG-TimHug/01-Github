@@ -46,23 +46,19 @@ abstract class Program
 
     private static int UserGapCount(string userInput)
         {
-        var amountSpaces = 0;
-        foreach (var singleCharacter in userInput)
-        {
+            var amountSpaces = 0;
+            foreach (var singleCharacter in userInput)
+                if (singleCharacter == ' ')
+                {
+                    amountSpaces++;
+                }
 
-            if (singleCharacter == ' ')
-            {
-                amountSpaces++;
-            }
-
-        }
-
-        return amountSpaces;
+            return amountSpaces;
         }
                                     */
         //Klassen Aufgabe 3 (Aufgaben 1/2 bereits während Recherche gelöst. Siehe Conf für mehr info
 
-        /*
+        //*
         var userCounter1 = new Counter();
         var userCounter2 = new Counter();
 
@@ -113,7 +109,6 @@ abstract class Program
                                     Console.WriteLine("Error 404 Operation not found. Please try again.");
                                     break;
                             }
-
                             break;
                         }
                         case 2:
@@ -137,12 +132,11 @@ abstract class Program
                                     Console.WriteLine("Error 404 Operation not found. Please try again.");
                                     break;
                             }
-
                             break;
                         }
                     }
-
                     break;
+                
                 case 2:
                     {
                         Console.WriteLine("Select a counter you want to view.");
@@ -167,7 +161,6 @@ abstract class Program
                                 break;
                             }
                         }
-
                         break;
                     }
 
@@ -178,7 +171,7 @@ abstract class Program
                 }
             }
         }
-                                                    */
+                                                   // */
     }
 
 
