@@ -54,7 +54,6 @@ abstract class Program
                 amountSpaces++;
             }   
         }
-
         return amountSpaces;
     }
                                     */
@@ -77,7 +76,7 @@ abstract class Program
                     Console.WriteLine("Enter a number");
                     if (int.TryParse(Console.ReadLine(), out var userValue))
                     {
-
+                        Console.WriteLine($"You have selected {userValue}.");
                     }
                     else
                     {
