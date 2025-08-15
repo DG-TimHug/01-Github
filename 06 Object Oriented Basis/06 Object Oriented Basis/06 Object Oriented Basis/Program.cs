@@ -72,9 +72,9 @@ abstract class Program
             {
                 case 1:
                 {
-                    var selectCounter = SelectCounter();
+                    var selectedCounter = SelectCounter();
                     var userValue = GetUserValue();
-                    switch (selectCounter)
+                    switch (selectedCounter)
                     {
                         case 1:
                         {
@@ -201,8 +201,8 @@ abstract class Program
         Console.WriteLine("1 = Make Changes to Counter 1");
         Console.WriteLine("2 = Make Changes to Counter 2");
         Console.WriteLine("");
-        int.TryParse(Console.ReadLine(), out var selectCounter);
-        return selectCounter;
+        int.TryParse(Console.ReadLine(), out var selectedCounter);
+        return selectedCounter;
     }
 
     private static int StartUp()
