@@ -14,16 +14,16 @@ abstract class Program
                                         */
         /*
         //Methoden Aufgabe 2
-        int userNum1 = 0;
-        int userNum2 = 0;
+        var userNum1 = 0;
+        var userNum2 = 0;
 
         Console.WriteLine("Please enter 2 numbers.");
         int.TryParse(Console.ReadLine(), out userNum1);
         int.TryParse(Console.ReadLine(), out userNum2);
 
-        bool NumberChecker(int userNum1, int userNum2)
+        bool IsFirstNumGreaterThanSecondNum(int userNum1, int userNum2)
         {
-            if(userNum1 > userNum2)
+            if (userNum1 > userNum2)
             {
                 return true;
             }
@@ -33,18 +33,18 @@ abstract class Program
             }
         }
 
-        Console.WriteLine(NumberChecker(userNum1, userNum2));
+        Console.WriteLine(IsFirstNumGreaterThanSecondNum(userNum1, userNum2));
                                         */
         //Methoden Aufgabe 3
         /*
         Console.WriteLine("Please write a short sentence.");
         var userInput = Console.ReadLine();
 
-        var output = GapCounter(userInput);
+        var output = UserGapCount(userInput);
        Console.WriteLine(output);
     }
 
-    private static int GapCounter(string userInput)
+    private static int UserGapCount(string userInput)
         {
         var amountSpaces = 0;
         foreach (var singleCharacter in userInput)
@@ -58,27 +58,28 @@ abstract class Program
         }
 
         return amountSpaces;
-
         }
                                     */
         //Klassen Aufgabe 3 (Aufgaben 1/2 bereits während Recherche gelöst. Siehe Conf für mehr info
+
+        /*
         var userCounter1 = new Counter();
         var userCounter2 = new Counter();
-        
+
         while (true)
         {
             Console.WriteLine("What do you want to do today?");
             Console.WriteLine("1 = Make Changes to Counters");
             Console.WriteLine("2 = View Values of Counters");
             int.TryParse(Console.ReadLine(), out var selectedOption);
-            
+
             switch (selectedOption)
             {
                 case 1:
                     Console.WriteLine("Enter a number");
                     if (int.TryParse(Console.ReadLine(), out var userValue))
                     {
-                
+
                     }
                     else
                     {
@@ -149,7 +150,7 @@ abstract class Program
                         Console.WriteLine("2 = View Counter 2");
                         int.TryParse(Console.ReadLine(), out var viewCounter);
                         switch(viewCounter)
-                        {   
+                        {
                             case 1:
                             {
                                 Console.WriteLine($"Current Value in Counter 1 is **{userCounter1.Count}**");
@@ -177,14 +178,14 @@ abstract class Program
                 }
             }
         }
-
+                                                    */
     }
 
 
-    private class Counter 
-   { 
+    private class Counter
+   {
        public int Count;
-       
+
        public void AddToCounter(int userNum)
        {
            Count += userNum;
@@ -193,7 +194,9 @@ abstract class Program
        {
            Count -= userNum;
        }
-       
+
    }
+   
+    
 }                
 
