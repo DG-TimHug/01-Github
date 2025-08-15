@@ -45,16 +45,18 @@ abstract class Program
     }
 
     private static int UserGapCount(string userInput)
-        {
-            var amountSpaces = 0;
-            foreach (var singleCharacter in userInput)
-                if (singleCharacter == ' ')
-                {
-                    amountSpaces++;
-                }
-
-            return amountSpaces;
+    {
+        var amountSpaces = 0;
+        foreach (var singleCharacter in userInput)
+        {   
+            if (singleCharacter == ' ')
+            {
+                amountSpaces++;
+            }   
         }
+
+        return amountSpaces;
+    }
                                     */
         //Klassen Aufgabe 3 (Aufgaben 1/2 bereits während Recherche gelöst. Siehe Conf für mehr info
 
@@ -90,48 +92,12 @@ abstract class Program
                     {
                         case 1:
                         {
-                            Console.WriteLine("Counter 1 selected");
-                            Console.WriteLine("Enter a number to select your operation");
-                            Console.WriteLine("1 = Addition");
-                            Console.WriteLine("2 = Subtraction");
-                            int.TryParse(Console.ReadLine(), out var operation);
-                            switch (operation)
-                            {
-                                case 1:
-                                    userCounter1.AddToCounter(userValue);
-                                    Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
-                                    break;
-                                case 2:
-                                    userCounter1.SubtractFromCounter(userValue);
-                                    Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
-                                    break;
-                                default:
-                                    Console.WriteLine("Error 404 Operation not found. Please try again.");
-                                    break;
-                            }
+                            UpdateCounter1(userValue, userCounter1);
                             break;
                         }
                         case 2:
                         {
-                            Console.WriteLine("Counter 2 selected");
-                            Console.WriteLine("Enter a number to select your operation");
-                            Console.WriteLine("1 = Addition");
-                            Console.WriteLine("2 = Subtraction");
-                            int.TryParse(Console.ReadLine(), out var operation);
-                            switch (operation)
-                            {
-                                case 1:
-                                    userCounter2.AddToCounter(userValue);
-                                    Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
-                                    break;
-                                case 2:
-                                    Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
-                                    userCounter2.SubtractFromCounter(userValue);
-                                    break;
-                                default:
-                                    Console.WriteLine("Error 404 Operation not found. Please try again.");
-                                    break;
-                            }
+                            UpdateCounter2(userValue, userCounter2);
                             break;
                         }
                     }
@@ -171,9 +137,8 @@ abstract class Program
                 }
             }
         }
-                                                   // */
+                                                    // */
     }
-
 
     private class Counter
    {
@@ -183,13 +148,56 @@ abstract class Program
        {
            Count += userNum;
        }
+       
        public void SubtractFromCounter(int userNum)
        {
            Count -= userNum;
        }
-
    }
-   
-    
-}                
 
+    private static void UpdateCounter1(int userValue, Counter userCounter1)
+    {
+        Console.WriteLine("Counter 1 selected");
+        Console.WriteLine("Enter a number to select your operation");
+        Console.WriteLine("1 = Addition");
+        Console.WriteLine("2 = Subtraction");
+        int.TryParse(Console.ReadLine(), out var operation);
+        switch (operation)
+        {
+            case 1:
+                userCounter1.AddToCounter(userValue);
+                Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
+                break;
+            case 2:
+                userCounter1.SubtractFromCounter(userValue);
+                Console.WriteLine($"New Value in Counter 1 is {userCounter1.Count}");
+                break;
+            default:
+                Console.WriteLine("Error 404 Operation not found. Please try again.");
+                break;
+        }
+    }
+
+    private static void UpdateCounter2(int userValue, Counter userCounter2)
+    {
+        Console.WriteLine("Counter 2 selected");
+        Console.WriteLine("Enter a number to select your operation");
+        Console.WriteLine("1 = Addition");
+        Console.WriteLine("2 = Subtraction");
+        int.TryParse(Console.ReadLine(), out var operation);
+        switch (operation)
+        {
+            case 1:
+                userCounter2.AddToCounter(userValue);
+                Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
+                break;
+            case 2:
+                Console.WriteLine($"New Value in Counter 2 is {userCounter2.Count}");
+                userCounter2.SubtractFromCounter(userValue);
+                break;
+            default:
+                Console.WriteLine("Error 404 Operation not found. Please try again.");
+                break;
+        }
+    }
+}
