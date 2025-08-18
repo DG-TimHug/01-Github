@@ -7,9 +7,10 @@ class Program
 {
     private static void Main(string[] args)
     {
-        var mainCounter = new Counter("Main Counter");
+        
         while (true)
         {
+            var mainCounter = new Counter("Main Counter");
             Console.WriteLine("Hello and Welcome to the Calculator.");
             var selectedOperator = SelectOperator();
 
@@ -23,6 +24,7 @@ class Program
                     Console.WriteLine($"You will now be adding {selectedNumber1} to {selectedNumber2}.");
                     mainCounter.AddNumbers(selectedNumber1, selectedNumber2);
                     Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine("");
                     break;
                 }
 
@@ -33,6 +35,7 @@ class Program
                     Console.WriteLine($"You will now be subtracting {selectedNumber1} from {selectedNumber2}.");
                     mainCounter.SubtractNumbers(selectedNumber1, selectedNumber2);
                     Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine("");
                     break;
                 }
 
@@ -43,6 +46,7 @@ class Program
                     Console.WriteLine($"You will now be multiplying {selectedNumber1} and {selectedNumber2}.");
                     mainCounter.MultiplyNumbers(selectedNumber1, selectedNumber2);
                     Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine("");
                     break;
                 }
 
@@ -53,6 +57,7 @@ class Program
                     Console.WriteLine($"You will now be dividing {selectedNumber1} and {selectedNumber2}.");
                     mainCounter.DivideNumbers(selectedNumber1, selectedNumber2);
                     Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine("");
                     break;
                 }
 
@@ -63,6 +68,7 @@ class Program
                     Console.WriteLine($"You will now be using Modulo on {selectedNumber1} and {selectedNumber2}");
                     mainCounter.ModuloNumber(selectedNumber1, selectedNumber2);
                     Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine("");
                     break;
                 }
 
@@ -76,8 +82,10 @@ class Program
                 default:
                 {
                     Console.WriteLine("Please enter a valid Number.");
-                    //Environment.Exit(1);
-                    continue;
+                    Console.WriteLine("and...");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("fuck you");
+                    Environment.Exit(418);
                     break;
                 }
             }
@@ -86,16 +94,16 @@ class Program
 
     private static int SelectOperator()
     {
-        while (true)
-        {
-            Console.WriteLine("Please enter your operator.");
-            Console.WriteLine("1 = Addition");
-            Console.WriteLine("2 = Subtraction");
-            Console.WriteLine("3 = Multiplication");
-            Console.WriteLine("4 = Division");
-            Console.WriteLine("5 = Modulo");
-            //Console.WriteLine("6 = View Current result in counter");
-        }
+        
+        Console.WriteLine("Please enter your operator.");
+        Console.WriteLine("1 = Addition");
+        Console.WriteLine("2 = Subtraction");
+        Console.WriteLine("3 = Multiplication");
+        Console.WriteLine("4 = Division");
+        Console.WriteLine("5 = Modulo");
+        //Console.WriteLine("6 = View Current result in counter");
+        TryParse(Console.ReadLine(), out var selectedOperator);
+        return selectedOperator;
     }
 
     private static int SelectNumber1()
