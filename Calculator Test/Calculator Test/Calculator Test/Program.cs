@@ -23,7 +23,7 @@ class Program
                     var selectedNumber2 = SelectNumber2();
                     Console.WriteLine($"You will now be adding {selectedNumber1} to {selectedNumber2}.");
                     mainCounter.AddNumbers(selectedNumber1, selectedNumber2);
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine($"The Result is {mainCounter.Count}.");
                     Console.WriteLine("");
                     break;
                 }
@@ -34,7 +34,7 @@ class Program
                     var selectedNumber2 = SelectNumber2();
                     Console.WriteLine($"You will now be subtracting {selectedNumber1} from {selectedNumber2}.");
                     mainCounter.SubtractNumbers(selectedNumber1, selectedNumber2);
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine($"The Result is {mainCounter.Count}.");
                     Console.WriteLine("");
                     break;
                 }
@@ -45,7 +45,7 @@ class Program
                     var selectedNumber2 = SelectNumber2();
                     Console.WriteLine($"You will now be multiplying {selectedNumber1} and {selectedNumber2}.");
                     mainCounter.MultiplyNumbers(selectedNumber1, selectedNumber2);
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine($"The Result is {mainCounter.Count}.");
                     Console.WriteLine("");
                     break;
                 }
@@ -56,7 +56,7 @@ class Program
                     var selectedNumber2 = SelectNumber2();
                     Console.WriteLine($"You will now be dividing {selectedNumber1} and {selectedNumber2}.");
                     mainCounter.DivideNumbers(selectedNumber1, selectedNumber2);
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine($"The Result is {mainCounter.Count}.");
                     Console.WriteLine("");
                     break;
                 }
@@ -67,18 +67,11 @@ class Program
                     var selectedNumber2 = SelectNumber2();
                     Console.WriteLine($"You will now be using Modulo on {selectedNumber1} and {selectedNumber2}");
                     mainCounter.ModuloNumber(selectedNumber1, selectedNumber2);
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
+                    Console.WriteLine($"The Result is {mainCounter.Count}.");
                     Console.WriteLine("");
                     break;
                 }
-
-                case 6:
-                {
-                    Console.WriteLine($"Current Value in Counter 1 is **{mainCounter.Count}**");
-                    Console.WriteLine("");
-                    break;
-                }
-
+                
                 default:
                 {
                     Console.WriteLine("Please enter a valid Number.");
@@ -109,12 +102,14 @@ class Program
     private static int SelectNumber1()
     {
         Console.WriteLine("Please enter 2 numbers that you want to complete your Operation with.");
+        Console.WriteLine("Your first number please.");
         TryParse(Console.ReadLine(), out var selectedNumber1);
         return selectedNumber1;
     }
 
     private static int SelectNumber2()
     {
+        Console.WriteLine("Your second number please.");
         TryParse(Console.ReadLine(), out var selectedNumber2);
         return selectedNumber2;
     }
