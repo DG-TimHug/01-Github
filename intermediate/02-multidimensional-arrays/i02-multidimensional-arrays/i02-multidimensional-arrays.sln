@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "i02-multidimensional-arrays", "i02-multidimensional-arrays\i02-multidimensional-arrays.csproj", "{D766BE7E-60A1-459E-9B70-885DA232A119}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D766BE7E-60A1-459E-9B70-885DA232A119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D766BE7E-60A1-459E-9B70-885DA232A119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D766BE7E-60A1-459E-9B70-885DA232A119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D766BE7E-60A1-459E-9B70-885DA232A119}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
