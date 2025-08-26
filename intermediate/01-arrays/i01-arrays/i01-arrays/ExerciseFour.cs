@@ -13,9 +13,7 @@ public class ExerciseFour
             {
                 if (numbers[sort] > numbers[sort + 1])
                 {
-                    temp = numbers[sort + 1];
-                    numbers[sort + 1] = numbers[sort];
-                    numbers[sort] = temp;
+                    (numbers[sort], numbers[sort + 1]) = (numbers[sort + 1], numbers[sort]);
                 }
             }
         }

@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using static System.Int32;
+﻿using static System.Int32;
 
 namespace i01_arrays;
 

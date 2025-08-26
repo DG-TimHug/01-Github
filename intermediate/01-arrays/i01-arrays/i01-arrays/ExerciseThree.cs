@@ -8,9 +8,7 @@ public class ExerciseThree
 
         foreach (var number in nums)
         {
-            var sum = 0;
-            sum = number^2;
-            Console.WriteLine(sum);
+            Console.WriteLine(number * number);
         }
         Console.WriteLine("The numbers get multiplied with themselves.");
     }

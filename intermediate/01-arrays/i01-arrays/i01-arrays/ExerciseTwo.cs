@@ -8,19 +8,27 @@ public class ExerciseTwo
 
         Console.WriteLine($"This is the normal order:");
         PrintArray(nums);
-
-        Array.Reverse(nums);
+        
         Console.WriteLine();
         Console.WriteLine($"This is the order reversed.");
-        PrintArray(nums);
+        ArrayReverser(nums);
         Console.WriteLine(":)");
     }
     void PrintArray(int[] array)
     {
-        foreach (var nums in array)
+        foreach (var num  in array)
         {
-            Console.Write(nums + " ");
+            Console.Write(num + " ");
         }
         Console.WriteLine();
+    }
+    void ArrayReverser(int[] nums)
+    {
+        for (int i = 0; i < nums.Length / 2; i++)
+        {
+            (nums[i], nums[nums.Length - i - 1]) = (nums[nums.Length - i - 1], nums[i]);
+        }
+
+        Console.WriteLine(string.Join(" ", nums));
     }
 }
