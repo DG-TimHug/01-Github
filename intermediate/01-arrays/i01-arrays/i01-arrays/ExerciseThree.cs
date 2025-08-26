@@ -13,6 +13,5 @@ public class ExerciseThree
             Console.WriteLine(sum);
         }
         Console.WriteLine("The numbers get multiplied with themselves.");
-
     }
 }

@@ -59,11 +59,5 @@ class Program
                 break;
             }
         }
-
-
-        //Aufgabe 4
-        
-        //Aufgabe 6
-        
     }
 }
