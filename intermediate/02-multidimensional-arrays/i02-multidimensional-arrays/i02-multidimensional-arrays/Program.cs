@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //Aufgabe 1
+        //ExerciseOne.SumOfAllElements();
+        //Aufgabe 2
+        ExerciseTwo.DoExercise();
     }
 }
