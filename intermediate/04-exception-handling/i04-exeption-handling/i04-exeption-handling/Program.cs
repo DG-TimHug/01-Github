@@ -6,7 +6,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        //NumberChecker.PositivChecker();
-        //AddNumbers.NumberAdder();
+        NumberChecker.PositivChecker();
+        AddNumbers.NumberAdder();
+        ExerciseThree.Answer();
+        ExerciseFour.Answer();
     }
 }
