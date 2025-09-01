@@ -2,10 +2,9 @@ namespace i01_arrays;
 
 public class ExerciseFour
 {
-    public void DoExercise()
+    public static void DoExercise()
     {
         var numbers = new [] { 20, 17, 365, 643, 6643, 0, 23, 7, 4, 8, 335, 23, 5, 6, 2, 35, 6, 8, 34534, 7, 347, 34, 55, 3, 6, 30 };
-        int temp;
 
         for (var num = 0; num <= numbers.Length; num++)
         {

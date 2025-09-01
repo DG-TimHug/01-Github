@@ -20,7 +20,7 @@ class Program
             case 1:
             {
                 var exerciseOne = new ExerciseOne();
-                exerciseOne.DoExercise();
+                    ExerciseOne.DoExercise();
                 break;
             }
 
@@ -34,21 +34,21 @@ class Program
             case 3:
             {
                 var exerciseThree = new ExerciseThree();
-                exerciseThree.DoExercise();
+                    ExerciseThree.DoExercise();
                 break;
             }
 
             case 4:
             {
                 var exerciseFour = new ExerciseFour();
-                exerciseFour.DoExercise();
+                ExerciseFour.DoExercise();
                 break;
             }
 
             case 6:
             {
                 var exerciseSix = new ExerciseSix();
-                exerciseSix.DoExercise();
+                    ExerciseSix.DoExercise();
                 break;
             }
 

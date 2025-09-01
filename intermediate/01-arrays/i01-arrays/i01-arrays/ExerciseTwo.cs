@@ -14,7 +14,7 @@ public class ExerciseTwo
         ArrayReverser(nums);
         Console.WriteLine(":)");
     }
-    void PrintArray(int[] array)
+    static void PrintArray(int[] array)
     {
         foreach (var num  in array)
         {
@@ -22,7 +22,7 @@ public class ExerciseTwo
         }
         Console.WriteLine();
     }
-    void ArrayReverser(int[] nums)
+    static void ArrayReverser(int[] nums)
     {
         for (int i = 0; i < nums.Length / 2; i++)
         {

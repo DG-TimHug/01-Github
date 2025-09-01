@@ -2,7 +2,7 @@ namespace i01_arrays;
 
 public class ExerciseThree
 {
-    public void DoExercise()
+    public static void DoExercise()
     {
         int[] nums = { 20, 30, 40, 50, 800 };
 
