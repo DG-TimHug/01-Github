@@ -8,7 +8,6 @@ public static class OpsCenter
 {
     public static int SelectOperator()
     {
-        
         Console.WriteLine("Please enter your operator.");
         Console.WriteLine("1 = Addition");
         Console.WriteLine("2 = Subtraction");
