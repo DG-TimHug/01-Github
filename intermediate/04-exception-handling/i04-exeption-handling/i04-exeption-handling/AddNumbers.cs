@@ -1,7 +1,7 @@
 using static System.Int32;
 namespace i04_exeption_handling;
 
-public class AddNumbers
+public static class AddNumbers
 {
     public static void NumberAdder()
     {
@@ -12,31 +12,35 @@ public class AddNumbers
                 var sum = 0;
                 Console.WriteLine("Enter 2 numbers you want to add.");
                 Console.WriteLine("Please enter your first number.");
-                if (TryParse(Console.ReadLine(), out var firstUserinput))
-                {
-                    
-                }
-                else
+                if (!TryParse(Console.ReadLine(), out var firstUserinput))
                 {
                     throw new ArgumentException("No Vaild Number entered");
                 }
 
                 Console.WriteLine("Please enter your second number.");
-                if (TryParse(Console.ReadLine(), out var secondUserInput))
-                {
-                    
-                }
-                else
+                if (!TryParse(Console.ReadLine(), out var secondUserInput))
                 {
                     throw new ArgumentException("No Vaild Number entered");
                 }
-
-                sum = firstUserinput + secondUserInput;
+                
+                try
+                {
+                    checked
+                    {
+                        sum = firstUserinput + secondUserInput;
+                    }
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("An error has occured. We are sorry for the inconvenience.");
+                }
                 Console.WriteLine($"The result is : {sum}");
+                Console.WriteLine();
             }
-            catch(SystemException exception) 
+            catch(SystemException)
             {
-                Console.WriteLine("An error has occured. We are sorry for the inconvenience.");                
+                Console.WriteLine("An error has occured. We are sorry for the inconvenience.");
+                Console.WriteLine();
             }
         }
     }

@@ -1,6 +1,6 @@
 namespace i04_exeption_handling;
 
-public class ExerciseThree
+public static class ExerciseThree
 {
     public static void Answer()
     {

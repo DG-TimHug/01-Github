@@ -18,7 +18,7 @@ public class NumberChecker
                 Console.WriteLine($"The result is {num}");
             }
         }
-        catch (SystemException exception)
+        catch (SystemException)
         {
             Console.WriteLine("An error has occured.(Below Zero)");
         }
