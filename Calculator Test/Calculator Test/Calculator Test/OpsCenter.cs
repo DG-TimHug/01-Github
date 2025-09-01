@@ -13,8 +13,7 @@ public static class OpsCenter
         Console.WriteLine("2 = Subtraction");
         Console.WriteLine("3 = Multiplication");
         Console.WriteLine("4 = Division");
-        Console.WriteLine("(5 = Modulo)");
-        //Console.WriteLine("6 = View Current result in counter");
+        Console.WriteLine("5 = Modulo");
         TryParse(Console.ReadLine(), out var selectedOperator);
         return selectedOperator;
     }

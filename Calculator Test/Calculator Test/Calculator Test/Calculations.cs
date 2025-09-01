@@ -2,7 +2,7 @@ namespace Calculator_Test;
 
 public class Counter(string name)
 {
-    public long Count;
+    public double Count;
     public string Name = name;
 
     public void AddNumbers(int selectedNumber1, int selectedNumber2)
@@ -22,7 +22,7 @@ public class Counter(string name)
 
     public void DivideNumbers(int selectedNumber1, int selectedNumber2)
     {
-        Count = selectedNumber1 / selectedNumber2;
+        Count = (double)selectedNumber1 / selectedNumber2;
     }
 
     public void ModuloNumber(int selectedNumber1, int selectedNumber2)
