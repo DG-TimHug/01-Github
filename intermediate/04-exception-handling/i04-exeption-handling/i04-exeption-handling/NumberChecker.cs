@@ -1,13 +1,13 @@
 using static System.Int32;
 namespace i04_exeption_handling;
 
-public class NumberChecker
+public static class NumberChecker
 {
     public static void PositivChecker()
     {
-        var num = 0;
         try
         {
+            int num;
             TryParse(Console.ReadLine(), out num);
             if (num < 0)
             {

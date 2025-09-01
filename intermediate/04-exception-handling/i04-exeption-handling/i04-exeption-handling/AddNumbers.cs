@@ -12,7 +12,7 @@ public static class AddNumbers
                 var sum = 0;
                 Console.WriteLine("Enter 2 numbers you want to add.");
                 Console.WriteLine("Please enter your first number.");
-                if (!TryParse(Console.ReadLine(), out var firstUserinput))
+                if (!TryParse(Console.ReadLine(), out var firstUserInput))
                 {
                     throw new ArgumentException("No Vaild Number entered");
                 }
@@ -26,15 +26,14 @@ public static class AddNumbers
                 try
                 {
                     checked
-                    {
-                        sum = firstUserinput + secondUserInput;
+                    { 
+                        Console.WriteLine($"The result is : {firstUserInput + secondUserInput}");
                     }
                 }
                 catch (OverflowException)
                 {
                     Console.WriteLine("An error has occured. We are sorry for the inconvenience.");
                 }
-                Console.WriteLine($"The result is : {sum}");
                 Console.WriteLine();
             }
             catch(SystemException)
