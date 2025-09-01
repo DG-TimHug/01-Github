@@ -7,8 +7,7 @@ public static class NumberChecker
     {
         try
         {
-            int num;
-            TryParse(Console.ReadLine(), out num);
+            TryParse(Console.ReadLine(), out int num);
             if (num < 0)
             {
                 throw new ArgumentException("Number is below Zero", nameof(num));
