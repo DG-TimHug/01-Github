@@ -1,9 +1,8 @@
-﻿using System.Security.Cryptography;
-using Calculator_Test;
+﻿using Calculator_Test;
 
 while (true)
 {
-    var mainCounter = new Counter("Main Counter");
+    var mainCounter = new Calculator("Main Counter");
     Console.WriteLine("Hello and Welcome to the Calculator.");
     var selectedOperator = OpsCenter.SelectOperator();
     var selectedNumber1 = OpsCenter.SelectNumber1();

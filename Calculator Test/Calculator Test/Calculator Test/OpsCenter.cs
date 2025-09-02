@@ -18,18 +18,18 @@ public static class OpsCenter
         return selectedOperator;
     }
     
-    public static int SelectNumber1()
+    public static double SelectNumber1()
     {
         Console.WriteLine("Please enter 2 numbers that you want to complete your Operation with.");
         Console.WriteLine("Your first number please.");
-        TryParse(Console.ReadLine(), out var selectedNumber1);
+        double.TryParse(Console.ReadLine(), out double selectedNumber1);
         return selectedNumber1;
     }
 
-    public static int SelectNumber2()
+    public static double SelectNumber2()
     {
         Console.WriteLine("Your second number please.");
-        TryParse(Console.ReadLine(), out var selectedNumber2);
+        double.TryParse(Console.ReadLine(), out double selectedNumber2);
         return selectedNumber2;
     }
 }
