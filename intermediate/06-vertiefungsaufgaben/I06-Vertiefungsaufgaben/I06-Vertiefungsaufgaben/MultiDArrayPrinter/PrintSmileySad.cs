@@ -21,8 +21,6 @@ public static class PrintSmileySad
                 Console.Write(smileySad[row1, row2] ? "X, " : " , ");
             }
             Console.WriteLine();
-            Console.WriteLine("Hello World!");
-            
         }
     }
 }
