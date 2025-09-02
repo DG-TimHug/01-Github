@@ -10,22 +10,22 @@ public class Calculator(string name)
         Calculate = selectedNumber1 + selectedNumber2;
     }
 
-    public void SubtractNumbers(double selectedNumber1, int selectedNumber2)
+    public void SubtractNumbers(double selectedNumber1, double selectedNumber2)
     {
         Calculate = selectedNumber1 - selectedNumber2;
     }
 
-    public void MultiplyNumbers(int selectedNumber1, int selectedNumber2)
+    public void MultiplyNumbers(double selectedNumber1, double selectedNumber2)
     {
         Calculate = selectedNumber1 * selectedNumber2;
     }
 
-    public void DivideNumbers(int selectedNumber1, int selectedNumber2)
+    public void DivideNumbers(double selectedNumber1, double selectedNumber2)
     {
-        Calculate = (double)selectedNumber1 / selectedNumber2;
+        Calculate = selectedNumber1 / selectedNumber2;
     }
 
-    public void ModuloNumber(int selectedNumber1, int selectedNumber2)
+    public void ModuloNumber(double selectedNumber1, double selectedNumber2)
     {
         Calculate = selectedNumber1 % selectedNumber2;
     }

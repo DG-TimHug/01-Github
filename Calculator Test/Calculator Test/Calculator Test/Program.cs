@@ -4,9 +4,9 @@ while (true)
 {
     var mainCounter = new Calculator("Main Counter");
     Console.WriteLine("Hello and Welcome to the Calculator.");
-    var selectedOperator = OpsCenter.SelectOperator();
-    var selectedNumber1 = OpsCenter.SelectNumber1();
-    var selectedNumber2 = OpsCenter.SelectNumber2();
+    var selectedOperator = StartUp.SelectOperator();
+    var selectedNumber1 = StartUp.SelectNumber1();
+    var selectedNumber2 = StartUp.SelectNumber2();
     
     switch (selectedOperator)
     {

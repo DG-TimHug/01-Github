@@ -1,10 +1,8 @@
-using System.Diagnostics.CodeAnalysis;
 using static System.Int32;
 
 namespace Calculator_Test;
-[SuppressMessage("Performance", "CA1806:Do not ignore method results")]
 
-public static class OpsCenter
+public static class StartUp
 {
     public static int SelectOperator()
     {

@@ -1,6 +1,6 @@
 namespace Calculator_Test;
 
-public class ExecOperations
+public static class ExecOperations
 {
     public static void Additon(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
     {
@@ -10,7 +10,7 @@ public class ExecOperations
         Console.WriteLine("");
     }
 
-    public static void Subtraction(Calculator mainCalculator, double selectedNumber1, int selectedNumber2)
+    public static void Subtraction(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be subtracting {selectedNumber1} from {selectedNumber2}.");
         mainCalculator.SubtractNumbers(selectedNumber1, selectedNumber2);
@@ -18,7 +18,7 @@ public class ExecOperations
         Console.WriteLine();
     }
 
-    public static void Multiplication(Calculator mainCalculator, int selectedNumber1, int selectedNumber2)
+    public static void Multiplication(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be multiplying {selectedNumber1} and {selectedNumber2}.");
         mainCalculator.MultiplyNumbers(selectedNumber1, selectedNumber2);
@@ -26,7 +26,7 @@ public class ExecOperations
         Console.WriteLine();
     }
 
-    public static void Division(Calculator mainCalculator, int selectedNumber1, int selectedNumber2)
+    public static void Division(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
     {
         try
         {
@@ -42,7 +42,7 @@ public class ExecOperations
         }
     }
 
-    public static void Modulo(Calculator mainCalculator, int selectedNumber1, int selectedNumber2)
+    public static void Modulo(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be using Modulo on {selectedNumber1} and {selectedNumber2}");
         mainCalculator.ModuloNumber(selectedNumber1, selectedNumber2);
