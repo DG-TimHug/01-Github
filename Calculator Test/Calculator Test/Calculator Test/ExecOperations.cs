@@ -2,38 +2,34 @@ namespace Calculator_Test;
 
 public static class ExecOperations
 {
-    public static void Additon(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
+    public static void Additon(Calculator calculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be adding {selectedNumber1} to {selectedNumber2}.");
-        mainCalculator.AddNumbers(selectedNumber1, selectedNumber2);
-        Console.WriteLine($"The Result is {mainCalculator.Calculate}.");
-        Console.WriteLine("");
+        calculator.AddNumbers(selectedNumber1, selectedNumber2);
+        calculator.PrintResult(calculator);
     }
 
-    public static void Subtraction(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
+    public static void Subtraction(Calculator calculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be subtracting {selectedNumber1} from {selectedNumber2}.");
-        mainCalculator.SubtractNumbers(selectedNumber1, selectedNumber2);
-        Console.WriteLine($"The Result is {mainCalculator.Calculate}.");
-        Console.WriteLine();
+        calculator.SubtractNumbers(selectedNumber1, selectedNumber2);
+        calculator.PrintResult(calculator);
     }
 
-    public static void Multiplication(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
+    public static void Multiplication(Calculator calculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be multiplying {selectedNumber1} and {selectedNumber2}.");
-        mainCalculator.MultiplyNumbers(selectedNumber1, selectedNumber2);
-        Console.WriteLine($"The Result is {mainCalculator.Calculate}.");
-        Console.WriteLine();
+        calculator.MultiplyNumbers(selectedNumber1, selectedNumber2);
+        calculator.PrintResult(calculator);
     }
 
-    public static void Division(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
+    public static void Division(Calculator calculator, double selectedNumber1, double selectedNumber2)
     {
         try
         {
             Console.WriteLine($"You will now be dividing {selectedNumber1} and {selectedNumber2}.");
-            mainCalculator.DivideNumbers(selectedNumber1, selectedNumber2);
-            Console.WriteLine($"The Result is {mainCalculator.Calculate}.");
-            Console.WriteLine();
+            calculator.DivideNumbers(selectedNumber1, selectedNumber2);
+            calculator.PrintResult(calculator);
         }
         catch (SystemException)
         {
@@ -42,12 +38,11 @@ public static class ExecOperations
         }
     }
 
-    public static void Modulo(Calculator mainCalculator, double selectedNumber1, double selectedNumber2)
+    public static void Modulo(Calculator calculator, double selectedNumber1, double selectedNumber2)
     {
         Console.WriteLine($"You will now be using Modulo on {selectedNumber1} and {selectedNumber2}");
-        mainCalculator.ModuloNumber(selectedNumber1, selectedNumber2);
-        Console.WriteLine($"The Result is {mainCalculator.Calculate}.");
-        Console.WriteLine();
+        calculator.ModuloNumber(selectedNumber1, selectedNumber2);
+        calculator.PrintResult(calculator);
     }
 }
 
