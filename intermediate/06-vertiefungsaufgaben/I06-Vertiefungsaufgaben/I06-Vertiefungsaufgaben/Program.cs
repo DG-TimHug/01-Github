@@ -2,29 +2,25 @@
 
 class Program
 {
-    static void Main(string[] args)
+    private static void Main()
     {
-        var multidimensioanlarray = new bool[6, 9]
+        var cross = new bool[6, 9]
         {
             { false, false, false, true, true, true, false, false, false }, 
             { false, false, false, true, true, true, false, false, false }, 
-            { true, true, true, true, true, true, true, true, true,},
-            { true, true, true, true, true, true, true, true, true,},
+            { false, true, true, true, true, true, true, true, false,},
+            { false, true, true, true, true, true, true, true, false,},
             { false, false, false, true, true, true, false, false, false }, 
             { false, false, false, true, true, true, false, false, false },
         };
-        for (int line = 0; line < 6; line++)
+
+        for (var row1 = 0; row1 < cross.GetLength(0); row1++)
         {
-            foreach (var state in multidimensioanlarray)
+            for (var row2 = 0; row2 < cross.GetLength(1); row2++)
             {
-                for (int placeholder = 0; placeholder <= 6; placeholder++)
-                {
-                    Console.Write(state ? "X, " : " , ");
-                }
-                Console.WriteLine();
+                Console.Write(cross[row1, row2] ? "X, " : " , ");
             }
             Console.WriteLine();
         }
-        
     }
 }
