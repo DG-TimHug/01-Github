@@ -2,7 +2,7 @@
 
 while (true)
 {
-    var mainCounter = new Calculator("Main Counter");
+    var calculator = new Calculator("Main Counter");
     Console.WriteLine("Hello and Welcome to the Calculator.");
     var selectedOperator = StartUp.SelectOperator();
     var selectedNumber1 = StartUp.SelectNumber1();
@@ -12,31 +12,31 @@ while (true)
     {
         case 1:
         {
-            ExecOperations.Additon(mainCounter, selectedNumber1, selectedNumber2);
+            ExecOperations.Addition(calculator, selectedNumber1, selectedNumber2);
             break;
         }
 
         case 2:
         {
-            ExecOperations.Subtraction(mainCounter, selectedNumber1, selectedNumber2);
+            ExecOperations.Subtraction(calculator, selectedNumber1, selectedNumber2);
             break;
         }
 
         case 3:
         {
-            ExecOperations.Multiplication(mainCounter, selectedNumber1, selectedNumber2);
+            ExecOperations.Multiplication(calculator, selectedNumber1, selectedNumber2);
             break;
         }
 
         case 4:
         {
-            ExecOperations.Division(mainCounter, selectedNumber1, selectedNumber2);
+            ExecOperations.Division(calculator, selectedNumber1, selectedNumber2);
             break;
         }
 
         case 5:
         {
-            ExecOperations.Modulo(mainCounter, selectedNumber1, selectedNumber2);
+            ExecOperations.Modulo(calculator, selectedNumber1, selectedNumber2);
             break;
         }
                 
