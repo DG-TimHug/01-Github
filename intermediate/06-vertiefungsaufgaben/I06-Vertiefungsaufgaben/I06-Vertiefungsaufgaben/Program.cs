@@ -13,21 +13,18 @@ class Program
             { false, false, false, true, true, true, false, false, false }, 
             { false, false, false, true, true, true, false, false, false },
         };
-        for (int line = 0; line <= 6; line++)
+        for (int line = 0; line < 6; line++)
         {
-            foreach (var State in multidimensioanlarray)
+            foreach (var state in multidimensioanlarray)
             {
-
-                if (State == true)
+                for (int placeholder = 0; placeholder <= 6; placeholder++)
                 {
-                    Console.Write("X, ");
+                    Console.Write(state ? "X, " : " , ");
                 }
-                else
-                {
-                    Console.Write(" , ");
-                }
+                Console.WriteLine();
             }
             Console.WriteLine();
         }
+        
     }
 }
