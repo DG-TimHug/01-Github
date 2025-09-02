@@ -1,6 +1,6 @@
-namespace I06_Vertiefungsaufgaben;
+namespace I06_Vertiefungsaufgaben.MultiDArrayPrinter;
 
-public class PrintCross
+public static class PrintCross
 {
     public static void Print() {
         var cross = new bool[,]

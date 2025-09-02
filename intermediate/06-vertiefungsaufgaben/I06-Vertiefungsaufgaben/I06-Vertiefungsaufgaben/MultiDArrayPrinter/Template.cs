@@ -1,8 +1,8 @@
-namespace I06_Vertiefungsaufgaben;
+namespace I06_Vertiefungsaufgaben.MultiDArrayPrinter;
 
-public class Template
+public static class Template
 {
-    public static void PrintTemplate6x9()
+    public static void PrintTemplate6X9()
     {
         var template = new bool[,]
         {

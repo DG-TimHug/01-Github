@@ -1,50 +1,39 @@
-﻿namespace I06_Vertiefungsaufgaben;
+﻿using I06_Vertiefungsaufgaben.MultiDArrayPrinter;
+
+namespace I06_Vertiefungsaufgaben;
 
 class Program
 {
     private static void Main()
     {
+        //To Be implemented
+        /*
         while (true)
         {
-            
-        
-            Console.WriteLine("How are you feeling today?");
-            Console.WriteLine("1. Happy");
-            Console.WriteLine("2. Sad");
-            Console.WriteLine("3. SWISS!");
-            int.TryParse(Console.ReadLine(), out var Feelings);
-
-            switch (Feelings)
+           
+            Console.WriteLine("Choose your question:");
+            Console.WriteLine("1 = Multidimensional Array Feelings Checker and Responder.");
+            Console.WriteLine("2 = Coming Soon!");
+            int.TryParse(Console.ReadLine(), out var selectedOption);
+            switch (selectedOption)
             {
                 case 1:
                 {
-                    Console.WriteLine("Good Job! Enjoy and have a great rest of your day!");
-                    Console.WriteLine();
-                    PrintSmileyHappy.Print();
+                    FeelingsResponder.Responder();
                     break;
                 }
                 case 2:
                 {
-                    Console.WriteLine("Aww :( Hope you feel better soon.");
-                    Console.WriteLine();
-                    PrintSmileySad.Print();
-                    break;
-                }
-                case 3:
-                {
-                    Console.WriteLine("YES!");
-                    Console.WriteLine();
-                    PrintCross.Print();
+                    Console.WriteLine("Coming Soon!");
                     break;
                 }
                 default:
                 {
-                    Console.WriteLine("Since you didnt enter one of the number above heres the template.");
-                    Console.WriteLine();
-                    Template.PrintTemplate6x9();
+                    Console.WriteLine("Please choose another option.");
                     break;
                 }
             }
-        }
+        }                                                                                   */
+        
     }
 }

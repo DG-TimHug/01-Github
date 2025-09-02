@@ -1,6 +1,6 @@
-namespace I06_Vertiefungsaufgaben;
+namespace I06_Vertiefungsaufgaben.MultiDArrayPrinter;
 
-public class PrintSmileySad
+public static class PrintSmileySad
 {
     public static void Print()
     {
