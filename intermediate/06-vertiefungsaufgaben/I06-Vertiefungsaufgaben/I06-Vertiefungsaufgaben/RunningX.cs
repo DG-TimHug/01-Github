@@ -6,16 +6,12 @@ public static class RunningX
     {
         var width = 0;
         width = Console.WindowWidth;
-        for (var left = 0; left <width ; left++)
+        var top = 6;
+        for (var left = 0; left < width; left++)
         {
-            Console.SetCursorPosition(left,15);
-            Console.Write("X");
-            Task.Delay(5000000);
-            Task.Delay(5000000);
-            Task.Delay(5000000);
-            Task.Delay(5000000);
-            Task.Delay(5000000);
-            Task.Delay(5000000);
+            Console.SetCursorPosition(left,top);
+           Console.Write("X");
+           Thread.Sleep(150);
             Console.Clear();
         }
     }
