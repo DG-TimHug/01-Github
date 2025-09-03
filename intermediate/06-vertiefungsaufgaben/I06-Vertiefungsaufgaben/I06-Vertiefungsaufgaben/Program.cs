@@ -13,7 +13,7 @@ class Program
            
             Console.WriteLine("Choose your question:");
             Console.WriteLine("1 = Multidimensional Array Feelings Checker and Responder.");
-            Console.WriteLine("2 = Coming Soon!");
+            Console.WriteLine("2 = Running X");
             int.TryParse(Console.ReadLine(), out var selectedOption);
             switch (selectedOption)
             {

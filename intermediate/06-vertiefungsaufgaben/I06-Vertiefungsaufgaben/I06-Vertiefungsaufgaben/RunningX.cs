@@ -1,37 +1,69 @@
-using System.Reflection.Metadata.Ecma335;
-
 namespace I06_Vertiefungsaufgaben;
 
 public static class RunningX
 {
     public static void Run()
     {
-        var width = 0;
-        width = Console.WindowWidth;
-        var top = 50;
-        var left = 50;
+        Console.Clear();
+        var top = 3;
+        var left = 20;
         
-        var upArrow = Console.ReadKey().Key == ConsoleKey.UpArrow;
-        var downArrow = Console.ReadKey().Key == ConsoleKey.DownArrow;
-        if (upArrow != true)
+        Updater(left, top);
+        ConsoleKeyInfo keyInfo;
+        try
         {
-        }
-        else
-        {
-            top -= 1;
-        }
-        if (downArrow != true)
-        {
-        }
-        else
-        {
-            top += 1;
-        }
+            do
+            {
 
-        while (true)
-        {
-            Console.SetCursorPosition(left,top);
-            Console.Write("X");
+                keyInfo = Console.ReadKey();
+
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.W:
+                    {
+                        Console.Clear();
+                        top -= 1;
+                        Updater(left, top);
+                        break;
+                    }
+
+                    case ConsoleKey.S:
+                    {
+                        Console.Clear();
+                        top += 1;
+                        Updater(left, top);
+                        break;
+                    }
+
+                    case ConsoleKey.D:
+                    {
+                        Console.Clear();
+                        left += 1;
+                        Updater(left, top);
+                        break;
+                    }
+
+
+                    case ConsoleKey.A:
+                    {
+                        Console.Clear();
+                        left -= 1;
+                        Updater(left, top);
+                        break;
+                    }
+                }
+            } while (keyInfo.Key != ConsoleKey.X);
         }
+        catch (Exception)
+        {
+            Console.Write("Sorry. An error has occured (end of map). Please restart the application.");
+            Console.WriteLine();
+        }
+    }
+
+    private static void Updater(int left, int top)
+    {
+        Console.SetCursorPosition(left,top);
+        Console.Write("X");
     }
 }
