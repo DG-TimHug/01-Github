@@ -18,7 +18,7 @@ public static class Template
         {
             for (var row2 = 0; row2 < template.GetLength(1); row2++)
             {
-                Console.Write(template[row1, row2] ? "X, " : " , ");
+                Console.Write(template[row1, row2] ? "X  " : "   ");
             }
             Console.WriteLine();
         }

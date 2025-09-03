@@ -6,6 +6,7 @@ public class FeelingsResponder
     {
         while (true)
         {
+            Console.WriteLine();
             Console.WriteLine("How are you feeling today?");
             Console.WriteLine("1. Happy");
             Console.WriteLine("2. Sad");
@@ -37,7 +38,7 @@ public class FeelingsResponder
                 }
                 default:
                 {
-                    Console.WriteLine("Since you didnt enter one of the number above heres the template.");
+                    Console.WriteLine("Since you didnt enter one of the numbers above here's the template.");
                     Console.WriteLine();
                     Template.PrintTemplate6X9();
                     break;

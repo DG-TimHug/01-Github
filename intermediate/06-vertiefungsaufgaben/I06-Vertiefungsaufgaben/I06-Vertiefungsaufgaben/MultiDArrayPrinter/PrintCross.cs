@@ -17,7 +17,7 @@ public static class PrintCross
         {
             for (var row2 = 0; row2 < cross.GetLength(1); row2++)
             {
-                Console.Write(cross[row1, row2] ? "X, " : " , ");
+                Console.Write(cross[row1, row2] ? "X  " : "   ");
             }
             Console.WriteLine();
         }
