@@ -24,7 +24,7 @@ class Program
                 }
                 case 2:
                 {
-                    Console.WriteLine("Coming Soon!");
+                    RunningX.Run();
                     break;
                 }
                 default:
@@ -34,6 +34,5 @@ class Program
                 }
             }
         }                                                                                  
-        
     }
 }
