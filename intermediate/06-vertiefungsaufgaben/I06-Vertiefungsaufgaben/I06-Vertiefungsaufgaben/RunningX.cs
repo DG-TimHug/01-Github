@@ -9,7 +9,7 @@ public static class RunningX
         var left = 20;
         var consoleWidth = Console.WindowWidth;
         
-        Updater(left, top);
+        UpdateConsole(left, top);
         try
         {
             ConsoleKeyInfo keyInfo;
@@ -19,34 +19,29 @@ public static class RunningX
                 Console.Clear();
                 switch (keyInfo.Key)
                 {
-                    case ConsoleKey.W: 
-                        top -= 1;
-                        break;
-                    case ConsoleKey.S:
-                        top += 1;
-                        break;
-                    case ConsoleKey.D:
-                        left += 1;
+                    case ConsoleKey.W:
+                        top = Math.Max(0, top - 1);
                         break;
                     case ConsoleKey.A:
-                        left -= 1;
+                        left = Math.Max(0, left - 1);
+                        break;
+                    case ConsoleKey.S:
+                        top = Math.Min(Console.WindowHeight - 1, top + 1);
+                        break;
+                    case ConsoleKey.D:
+                        left = Math.Max(Console.WindowHeight - 1, left + 1);
                         break;
                 }
-                if (left <= consoleWidth)
-                {
-                    Console.SetCursorPosition(1,3);
-                }
-                Updater(left, top);
-            }   while (keyInfo.Key != ConsoleKey.X);
+                UpdateConsole(left, top);
+            } while (keyInfo.Key != ConsoleKey.X);
         }
-        catch (ArgumentException)
+        catch (Exception)
         {
-            //Console.Write("Sorry. An error has occured (end of map). Please restart the application.");
-            //Console.WriteLine();
+            Console.Write("error");
         }
     }
 
-    private static void Updater(int left, int top)
+    private static void UpdateConsole(int left, int top)
     {
         Console.SetCursorPosition(left,top);
         Console.Write("X");
