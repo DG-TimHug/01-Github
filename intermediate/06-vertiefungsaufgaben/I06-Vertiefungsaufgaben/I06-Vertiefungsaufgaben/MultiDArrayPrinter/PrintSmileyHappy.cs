@@ -16,9 +16,9 @@ public static class PrintSmileyHappy
 
         for (var row1 = 0; row1 < smileyHappy.GetLength(0); row1++)
         {
-            for (var row2 = 0; row2 < smileyHappy.GetLength(1); row2++)
+            for (var column = 0; column < smileyHappy.GetLength(1); column++)
             {
-                Console.Write(smileyHappy[row1, row2] ? "X  " : "   ");
+                Console.Write(smileyHappy[row1, column] ? "X  " : "   ");
             }
             Console.WriteLine();
         }

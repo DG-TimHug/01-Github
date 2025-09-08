@@ -1,13 +1,10 @@
 ﻿using I06_Vertiefungsaufgaben.MultiDArrayPrinter;
-
 namespace I06_Vertiefungsaufgaben;
 
 class Program
 {
     private static void Main()
     {
-        //To Be implemented
-        
         while (true)
         {
            
@@ -18,20 +15,14 @@ class Program
             switch (selectedOption)
             {
                 case 1:
-                {
                     FeelingsResponder.Responder();
                     break;
-                }
                 case 2:
-                {
                     RunningX.Run();
                     break;
-                }
                 default:
-                {
                     Console.WriteLine("Please choose another option.");
                     break;
-                }
             }
         }                                                                                  
     }

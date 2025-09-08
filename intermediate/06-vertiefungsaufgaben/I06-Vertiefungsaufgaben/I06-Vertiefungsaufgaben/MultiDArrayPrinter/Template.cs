@@ -16,9 +16,9 @@ public static class Template
 
         for (var row1 = 0; row1 < template.GetLength(0); row1++)
         {
-            for (var row2 = 0; row2 < template.GetLength(1); row2++)
+            for (var column = 0; column < template.GetLength(1); column++)
             {
-                Console.Write(template[row1, row2] ? "X  " : "   ");
+                Console.Write(template[row1, column] ? "X  " : "   ");
             }
             Console.WriteLine();
         }

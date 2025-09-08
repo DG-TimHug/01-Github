@@ -15,9 +15,9 @@ public static class PrintCross
 
         for (var row1 = 0; row1 < cross.GetLength(0); row1++)
         {
-            for (var row2 = 0; row2 < cross.GetLength(1); row2++)
+            for (var column = 0; column < cross.GetLength(1); column++)
             {
-                Console.Write(cross[row1, row2] ? "X  " : "   ");
+                Console.Write(cross[row1, column] ? "X  " : "   ");
             }
             Console.WriteLine();
         }

@@ -7,57 +7,42 @@ public static class RunningX
         Console.Clear();
         var top = 3;
         var left = 20;
+        var consoleWidth = Console.WindowWidth;
         
         Updater(left, top);
-        ConsoleKeyInfo keyInfo;
         try
         {
+            ConsoleKeyInfo keyInfo;
             do
             {
-
-                keyInfo = Console.ReadKey();
-
+                keyInfo = Console.ReadKey(true);
+                Console.Clear();
                 switch (keyInfo.Key)
                 {
-                    case ConsoleKey.W:
-                    {
-                        Console.Clear();
+                    case ConsoleKey.W: 
                         top -= 1;
-                        Updater(left, top);
                         break;
-                    }
-
                     case ConsoleKey.S:
-                    {
-                        Console.Clear();
                         top += 1;
-                        Updater(left, top);
                         break;
-                    }
-
                     case ConsoleKey.D:
-                    {
-                        Console.Clear();
                         left += 1;
-                        Updater(left, top);
                         break;
-                    }
-
-
                     case ConsoleKey.A:
-                    {
-                        Console.Clear();
                         left -= 1;
-                        Updater(left, top);
                         break;
-                    }
                 }
-            } while (keyInfo.Key != ConsoleKey.X);
+                if (left <= consoleWidth)
+                {
+                    Console.SetCursorPosition(1,3);
+                }
+                Updater(left, top);
+            }   while (keyInfo.Key != ConsoleKey.X);
         }
-        catch (Exception)
+        catch (ArgumentException)
         {
-            Console.Write("Sorry. An error has occured (end of map). Please restart the application.");
-            Console.WriteLine();
+            //Console.Write("Sorry. An error has occured (end of map). Please restart the application.");
+            //Console.WriteLine();
         }
     }
 

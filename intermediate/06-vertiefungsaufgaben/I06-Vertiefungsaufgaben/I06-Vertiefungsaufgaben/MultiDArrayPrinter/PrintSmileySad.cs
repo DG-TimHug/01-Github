@@ -16,9 +16,9 @@ public static class PrintSmileySad
 
         for (var row1 = 0; row1 < smileySad.GetLength(0); row1++)
         {
-            for (var row2 = 0; row2 < smileySad.GetLength(1); row2++)
+            for (var column = 0; column < smileySad.GetLength(1); column++)
             {
-                Console.Write(smileySad[row1, row2] ? "X  " : "   ");
+                Console.Write(smileySad[row1, column] ? "X  " : "   ");
             }
             Console.WriteLine();
         }
