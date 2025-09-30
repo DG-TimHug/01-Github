@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+       /*
+        * Listen sind wesentlich flexibler wie Arrays, da man wann man will daten hinzufügen, abrufen, verändern und Löschen kann.
+        */
     }
 }
