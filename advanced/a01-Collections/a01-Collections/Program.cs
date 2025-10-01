@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the advanced Part of Learn to Code. You are in collections. Which Question would you like to see?");
+        Console.WriteLine();
         int.TryParse(Console.ReadLine(), out var userSelection);
 
         switch (userSelection)

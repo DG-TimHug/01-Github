@@ -1,6 +1,6 @@
 namespace a01_Collections;
 
-public class Question4
+public static class Question4
 {
     public static void Execute()
     {
@@ -14,6 +14,10 @@ public class Question4
         };
         var allCurrenciesList = allAmounts.Select(d => d.Currency).ToList();
         var allCurrenciesSet = allCurrenciesList.ToHashSet();
+        Console.WriteLine(string.Join(",", allAmounts));
+        /*
+         * Es Printet den Standort der variablen amount 1-4
+         */
     }
 
     private class Money

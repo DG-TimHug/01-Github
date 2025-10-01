@@ -1,6 +1,6 @@
 namespace a01_Collections;
 
-public class Question2
+public static class Question2
 {
     public static void Execute()
     {
