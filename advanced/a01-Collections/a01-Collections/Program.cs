@@ -26,6 +26,12 @@ class Program
                 Question3.Execute();
                 break;
             }
+
+            case 4:
+            {
+                Question4.Execute();
+                break;
+            }
             default:
             {
                 Console.WriteLine("Please enter a full and vaild number");
