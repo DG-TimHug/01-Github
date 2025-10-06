@@ -39,9 +39,15 @@ class Program
                 Question5.Execute();
                 break;
             }
+
+            case 6:
+            {
+                Question6.ExchangeCourse();
+                break;
+            }
             default:
             {
-                Console.WriteLine("Please enter a full and vaild number");
+                Console.WriteLine("Please enter a full and valid number");
                 break;
             }
         }
