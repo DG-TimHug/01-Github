@@ -1,8 +1,6 @@
-using System.ComponentModel;
-
 namespace a03_DateTime;
 
-public class Question1
+public static class Question1
 {
     public static void Execute()
     {
