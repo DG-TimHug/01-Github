@@ -22,7 +22,7 @@ public class Question6
             {
                 case "EUR":
                 {
-                    var currentCurrency = "USD";
+                    var currentCurrency = "EUR";
                     Console.WriteLine("How much would you like to trade?");
                     double.TryParse(Console.ReadLine(), out var inputAmount);
                     var outInChf = eurToChf * inputAmount;
