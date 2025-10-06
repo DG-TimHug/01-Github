@@ -22,41 +22,45 @@ public class Question6
             {
                 case "EUR":
                 {
+                    var currentCurrency = "USD";
                     Console.WriteLine("How much would you like to trade?");
                     double.TryParse(Console.ReadLine(), out var inputAmount);
-                    var outputAmountInChf = eurToChf * inputAmount;
-                    Console.WriteLine($"That turns into {outputAmountInChf} CHF!");
+                    var outInChf = eurToChf * inputAmount;
+                    var outputAmountInChf = Math.Round(outInChf, 2);
+                    Console.WriteLine($"That turns into {outputAmountInChf} CHF at an exchange rate of {eurToChf} {currentCurrency} to {chfToChf} CHF.");
                     break;
                 }
 
                 case "USD":
                 {
+                    var currentCurrency = "USD";
                     Console.WriteLine("How much would you like to trade?");
                     double.TryParse(Console.ReadLine(), out var inputAmount);
-                    var outputAmountInChf = usdToChf * inputAmount;
-                    Console.WriteLine($"That turns into {outputAmountInChf} CHF!");
+                    var outInChf = usdToChf * inputAmount;
+                    var outputAmountInChf = Math.Round(outInChf, 2);
+                    Console.WriteLine($"That turns into {outputAmountInChf} CHF at an exchange rate of {usdToChf} {currentCurrency} to {chfToChf} CHF.");
                     break;
                 }
 
                 case "CHF":
                 {
+                    var currentCurrency = "CHF";
                     Console.WriteLine("How much would you like to trade?");
                     double.TryParse(Console.ReadLine(), out var inputAmount);
-                    var outputAmountInChf = chfToChf * inputAmount;
-                    Console.WriteLine($"That turns into {outputAmountInChf} CHF!");
+                    var outInChf = chfToChf * inputAmount;
+                    var outputAmountInChf = Math.Round(outInChf, 2);
+                    Console.WriteLine($"That turns into {outputAmountInChf} CHF at an exchange rate of {chfToChf} {currentCurrency} to {chfToChf} CHF.");
                     break;
                 }
-
                 default:
                 {
-                    throw new Exception("Currency Not Found!");
+                    throw new Exception();
                 }
             }
         }
         catch (Exception e)
         {
             Console.WriteLine("Currency was not Found!");
-            throw;
         }
     }
 }
