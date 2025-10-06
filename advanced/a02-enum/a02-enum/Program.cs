@@ -4,6 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Question2.GetGreeting();
+        Console.WriteLine("Choose your Question 2/3");
+        int.TryParse(Console.ReadLine(), out var selectedQuestion);
+        switch (selectedQuestion)
+        {
+            case 2:
+            {
+                Question2.GetGreeting();
+                break;
+            }
+            case 3:
+            {
+                Question3.Execute();
+                break;
+            }
+        }
     }
 }

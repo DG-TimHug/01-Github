@@ -1,5 +1,5 @@
 namespace a02_enum;
-/*
+
 public class Question1
 {
     
@@ -18,4 +18,4 @@ class Person
     private int age;
     private Gender Gender;
     private Person tim = new Person() { firstname = "Tim", lastname = "Hug", age = 15, Gender = Gender.Male };
-} */
+} 
