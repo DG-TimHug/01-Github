@@ -1,10 +1,10 @@
 namespace a02_enum;
-
+/*
 public class Question1
 {
     
 }
- public enum Gender
+ internal enum Gender
    {
        Male,
        Female,
@@ -18,4 +18,4 @@ class Person
     private int age;
     private Gender Gender;
     private Person tim = new Person() { firstname = "Tim", lastname = "Hug", age = 15, Gender = Gender.Male };
-}
+} */
