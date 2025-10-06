@@ -20,6 +20,11 @@ static class Program
                Question2.Execute();
                break;
            }
+           case 3:
+           {
+               Question3.Execute();
+               break;
+           }
        }
     }
 }
