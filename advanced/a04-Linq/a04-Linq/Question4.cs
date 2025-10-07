@@ -1,6 +1,6 @@
 namespace a04_Linq;
 
-public static class Question3
+public class Question4
 {
     
     public static void Execute()
@@ -15,16 +15,20 @@ public static class Question3
             Michael,
             Martha
         ];
-        PrintMales(group);
+        if (FemaleChecker(group))
+        {
+            Console.WriteLine("Females are in the group");
+        }
+        else
+        {
+            Console.WriteLine("There are no females in the group.");
+        }
     }
 
-    private static void PrintMales(List<Person> group)
+    private static bool FemaleChecker(List<Person> group)
     {
-        IEnumerable<Person> males = group.Where(person => person.Gender == Genders.Male).OrderBy(person => person.Lastname);
-        foreach (var male in males)
-        {
-            Console.WriteLine("Mr. " + male.Lastname);
-        }
+        IEnumerable<Person> females = group.Where(person => person.Gender == Genders.Female);
+        return females.Any();
     }
 
     private static readonly Person Tim = new() { Firstname = "Tim", Lastname = "Hug", Age = 15, Gender = Genders.Male };
@@ -61,4 +65,5 @@ public static class Question3
         Female,
         Unknown
     }
+    
 }
