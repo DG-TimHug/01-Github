@@ -35,6 +35,11 @@ class Program
                Question5.Execute();
                break;
            }
+           case 6:
+           {
+               Question6.Execute();
+               break;
+           }
        }
     }
 }

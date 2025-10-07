@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 namespace a04_Linq;
 
-public class Question2
+public static class Question2
 {
     public static void Execute()
     {

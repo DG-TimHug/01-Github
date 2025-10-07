@@ -1,6 +1,6 @@
 namespace a04_Linq;
 
-public class Question1
+public static class Question1
 {
     public static void Execute()
     {
