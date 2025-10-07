@@ -5,6 +5,7 @@ class Program
     static void Main()
     {
        Console.WriteLine("Choose your question 1-6");
+       Console.WriteLine();
        int.TryParse(Console.ReadLine(), out var selectedQuestion);
 
        switch (selectedQuestion)
@@ -27,6 +28,11 @@ class Program
            case 4:
            {
                Question4.Execute();
+               break;
+           }
+           case 5:
+           {
+               Question5.Execute();
                break;
            }
        }
