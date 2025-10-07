@@ -1,6 +1,6 @@
 ﻿namespace a02_enum;
 
-class Program
+internal static class Program
 {
     static void Main(string[] args)
     {
@@ -10,7 +10,7 @@ class Program
         {
             case 2:
             {
-                Question2.GetGreeting();
+                Question2.Execute();
                 break;
             }
             case 3:

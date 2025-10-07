@@ -11,11 +11,11 @@ public class Question1
        Unknown
    }
 
-class Person
+ internal class SingularPerson
 {
     private string firstname;
     private string lastname;
     private int age;
     private Gender Gender;
-    private Person tim = new Person() { firstname = "Tim", lastname = "Hug", age = 15, Gender = Gender.Male };
+    private SingularPerson tim = new SingularPerson() { firstname = "Tim", lastname = "Hug", age = 15, Gender = Gender.Male };
 } 
