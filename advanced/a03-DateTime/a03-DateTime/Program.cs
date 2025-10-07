@@ -21,7 +21,8 @@ static class Program
                break;
            }
            case 3:
-           {    var selectedDate = new DateTime(2021, 12, 21, 18, 23, 00, DateTimeKind.Unspecified);
+           {    
+               var selectedDate = new DateTime(2021, 12, 21, 18, 23, 00, DateTimeKind.Unspecified);
                Question3.Execute(selectedDate);
                break;
            }

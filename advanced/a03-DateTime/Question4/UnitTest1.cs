@@ -5,7 +5,7 @@ namespace Question4;
 public class Tests
 {
     [Test]
-    public void TestCETToUTCConverter1()
+    public void TestifCETtoUTCconverterWorksWinterTime()
     {
         //Arrange 
         var selectedDate = new DateTime(2021, 12, 21, 18, 23, 00, DateTimeKind.Unspecified);
@@ -18,7 +18,7 @@ public class Tests
     }
     
     [Test]
-    public void TestCETToUTCConverter2()
+    public void TestifCETtoUTCconverterWorksSummerTime()
     {
         //Arrange 
         var selectedDate = new DateTime(2021, 6, 22, 16, 23, 00, DateTimeKind.Unspecified);
@@ -31,7 +31,7 @@ public class Tests
     }
     
     [Test]
-    public void TestCETToUTCConverter3()
+    public void TestifCETtoUTCconverterWorksSummerTimeTest2()
     {
         //Arrange 
         var selectedDate = new DateTime(2025, 5, 13, 6, 25, 00, DateTimeKind.Unspecified);
