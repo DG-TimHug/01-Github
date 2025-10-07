@@ -1,8 +1,7 @@
 namespace a04_Linq;
 
-public class Question4
+public static class Question4
 {
-    
     public static void Execute()
     {
         List<Person> group =
@@ -65,5 +64,4 @@ public class Question4
         Female,
         Unknown
     }
-    
 }

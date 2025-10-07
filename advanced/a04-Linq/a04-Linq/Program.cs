@@ -1,8 +1,8 @@
 ﻿namespace a04_Linq;
 
-class Program
+static class Program
 {
-    static void Main()
+    private static void Main()
     {
        Console.WriteLine("Choose your question 1-6");
        Console.WriteLine();

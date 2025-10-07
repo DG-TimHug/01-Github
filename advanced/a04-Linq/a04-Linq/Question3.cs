@@ -2,7 +2,6 @@ namespace a04_Linq;
 
 public static class Question3
 {
-    
     public static void Execute()
     {
         List<Person> group =
