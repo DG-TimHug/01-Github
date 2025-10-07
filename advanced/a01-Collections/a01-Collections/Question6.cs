@@ -1,14 +1,16 @@
 namespace a01_Collections;
 
-public class Question6
+public static class Question6
 {
     public static void ExchangeCourse()
     {
-        Dictionary<string, double> exchangeRatesToChfByCurrency = new Dictionary<string, double>();
+        var exchangeRatesToChfByCurrency = new Dictionary<string, double>
+        {
+            { "CHF", 1.0 },
+            { "EUR", 0.94 },
+            { "USD", 0.80 }
+        };
 
-        exchangeRatesToChfByCurrency.Add("CHF", 1.0);
-        exchangeRatesToChfByCurrency.Add("EUR", 0.94);
-        exchangeRatesToChfByCurrency.Add("USD", 0.80);
         var chfToChf = exchangeRatesToChfByCurrency["CHF"];
         
         Console.WriteLine("From which Currency do you want to trade from? (ex. EUR, CHF, USD)");
@@ -46,7 +48,7 @@ public class Question6
                 }
             }
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Console.WriteLine("Currency was not Found!");
         }

@@ -24,7 +24,7 @@ public static class Question4
     {
         public decimal Amount { get; set; }
 
-        public string Currency { get; set; }
+        public required string Currency { get; set; }
     }
 }
     

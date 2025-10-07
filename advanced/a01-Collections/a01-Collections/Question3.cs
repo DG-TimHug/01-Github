@@ -5,7 +5,7 @@ public static class Question3
     public static void Execute()
     {
         Console.WriteLine();
-        List<int> list = new List<int>();
+        var list = new List<int>();
        
         list.Add(10);
         list.Add(25);
