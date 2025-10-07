@@ -34,8 +34,8 @@ public class Question2
             }
         }
     }
-    
-    public static Persons GetPersonInfo(string name)
+
+    private static Persons GetPersonInfo(string name)
     {
         if (name == "tim")
         {
