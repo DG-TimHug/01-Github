@@ -1,43 +1,41 @@
-using System.Runtime.InteropServices.JavaScript;
-
 namespace a03_DateTime;
 
 public static class Question1
 {
     public static void Execute()
     {
-        BillSolver(Powerbill.billDueDate, Powerbill.debtor, Powerbill.billAmount, Powerbill.billType);
+        BillSolver(Powerbill);
         Console.WriteLine();
-        BillSolver(Phonebill.billDueDate, Phonebill.debtor, Phonebill.billAmount, Phonebill.billType);
+        BillSolver(Phonebill);
         Console.WriteLine();
-        BillSolver(CarPayment.billDueDate, CarPayment.debtor, CarPayment.billAmount, CarPayment.billType);
+        BillSolver(CarPayment);
     }
 
     class Bill
     {
-        public string debtor;
-        public string billType;
-        public double billAmount;
-        public DateTime billDueDate;
+        public required string Debtor;
+        public required string BillType;
+        public double BillAmount;
+        public DateTime BillDueDate;
     }
 
-    private static Bill Powerbill = new()
+    private static readonly Bill Powerbill = new()
     {
-        debtor = "John Doe", billAmount = 423.36, billDueDate = new DateTime(2025, 10, 31, 12, 00, 00), billType = "Power Bill"
+        Debtor = "John Doe", BillAmount = 423.36, BillDueDate = new DateTime(2025, 10, 31, 12, 00, 00), BillType = "Power Bill"
     };
-    private static Bill Phonebill = new()
+    private static readonly Bill Phonebill = new()
     {
-        debtor = "Marie Johnson", billAmount = 99.50, billDueDate = new DateTime(2025, 10, 06, 12, 00, 00), billType = "Phone Bill"
+        Debtor = "Marie Johnson", BillAmount = 99.50, BillDueDate = new DateTime(2025, 10, 06, 12, 00, 00), BillType = "Phone Bill"
     };
-    private static Bill CarPayment = new()
+    private static readonly Bill CarPayment = new()
     {
-        debtor = "Mike Johnson", billAmount = 900, billDueDate = new DateTime(2025, 9, 30, 12, 00, 00), billType = "Car Payment"
+        Debtor = "Mike Johnson", BillAmount = 900, BillDueDate = new DateTime(2025, 9, 30, 12, 00, 00), BillType = "Car Payment"
     };
 
-    private static void BillSolver(DateTime dueDate, string debtor, double amount, string billType)
+    private static void BillSolver(Bill localBill)
     {
         var today = DateTime.Now;
-        var ts = dueDate - today;
+        var ts = localBill.BillDueDate - today;
                     
         var days = Math.Abs(ts.Days);
         var hours = Math.Abs(ts.Hours);
@@ -45,28 +43,27 @@ public static class Question1
         var seconds = Math.Abs(ts.Seconds);
         if (ts < TimeSpan.Zero)
         {
-            PrintOverDue(days, hours, minutes, seconds, debtor, amount, billType);
+            PrintOverDue(days, hours, minutes, seconds, localBill);
         }
         else
         {
-            PrintTimeLeft(days, hours, minutes, seconds, debtor, amount, billType );
+            PrintTimeLeft(days, hours, minutes, seconds, localBill);
         }
         Console.WriteLine();
         
-        
     }
-    private static void PrintOverDue(int days, int hours, int minutes, int seconds, string debtor, double billAmount, string billType)
+    private static void PrintOverDue(int days, int hours, int minutes, int seconds, Bill localBill)
     {
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write($"Dear Ms./Mr. {debtor}, your {billType} of {billAmount} CHF is overdue by {days} Days, {hours} Hours, {minutes} Minutes and {seconds} Seconds! ");
+        Console.Write($"Dear Ms./Mr. {localBill.Debtor}, your {localBill.BillType} of {localBill.BillAmount} CHF is overdue by {days} Days, {hours} Hours, {minutes} Minutes and {seconds} Seconds! ");
         Console.WriteLine("Please Pay it as soon as possible");
         Console.ResetColor();
     }
     
-    private static void PrintTimeLeft(int days, int hours, int minutes, int seconds, string debtor, double billAmount, string billType)
+    private static void PrintTimeLeft(int days, int hours, int minutes, int seconds, Bill localBill)
     {
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.Write($"Dear Ms./Mr. {debtor}, {days} Days, {hours} Hours, {minutes} Minutes and {seconds} Seconds remain to pay your {billType} of {billAmount} CHF.");
+        Console.Write($"Dear Ms./Mr. {localBill.Debtor}, {days} Days, {hours} Hours, {minutes} Minutes and {seconds} Seconds remain to pay your {localBill.BillType} of {localBill.BillAmount} CHF.");
         Console.ResetColor();
     }
 }
