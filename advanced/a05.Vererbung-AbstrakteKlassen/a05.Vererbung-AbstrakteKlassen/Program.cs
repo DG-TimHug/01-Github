@@ -36,27 +36,27 @@ class Program
             }
         }
 
-        public void GearShifterUp(int Gear)
+        public void GearShifterUp(int gear)
         {
-            if (Gear >= 8)
+            if (gear >= 8)
             {
                 
             }
             else
             {
-                Gear++;
+                gear++;
             }
         }
 
-        public void GearShifterDown(int Gear)
+        public void GearShifterDown(int gear)
         {
-            if (Gear <= -1)
+            if (gear <= -1)
             {
                 
             }
             else
             {
-                Gear--;
+                gear--;
             }
         }
 
@@ -81,12 +81,12 @@ class Program
         public int AmountSeats { get; protected set; }
         public int AmountPassengers { get; protected set; }
 
-        public void accelerate()
+        public void Accelerate()
         {
             Speed += 4;
         }
 
-        public void decelerate()
+        public void Decelerate()
         {
             Speed -= 4;
         }
@@ -125,29 +125,29 @@ class Program
     {
         public int LoadedWeight { get; protected set; }
         
-        public void accelerate()
+        public void Accelerate()
         {
             Speed += 2;
         }
 
-        public void decelerate()
+        public void Decelerate()
         {
             Speed -= 2;
         }
 
-        public void Loading(int Addedweight)
+        public void Loading(int addedweight)
         {
-            if (LoadedWeight + Addedweight >= 25)
+            if (LoadedWeight + addedweight >= 25)
             {
                 Console.WriteLine("Truck is Full!");
             }
             else
             {
-                LoadedWeight += Addedweight;
+                LoadedWeight += addedweight;
             }
         }
         
-        public void unloading(int Addedweight)
+        public void Unloading(int addedweight)
         {
             if (LoadedWeight <= 0)
             {
@@ -155,13 +155,43 @@ class Program
             }
             else
             {
-                LoadedWeight -= Addedweight;
+                LoadedWeight -= addedweight;
             }
         }
 
         public string GetTypeName()
         {
             return "LKW";
+        }
+    }
+
+    class MotorBike : Vehicle
+    {
+        public int CurveInclination { get; protected set; }
+        
+        public void Accelerate()
+        {
+            Speed += 6;
+        }
+
+        public void Decelerate()
+        {
+            Speed -= 6;
+        }
+
+        public void Left()
+        {
+            CurveInclination -= -2;
+        }
+
+        public void Right()
+        {
+            CurveInclination += +2;
+        }
+
+        public string GetTypeName()
+        {
+            return "Motorbike";
         }
     }
 }
