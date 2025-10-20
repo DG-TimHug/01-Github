@@ -1,26 +1,27 @@
 ﻿namespace a05.Vererbung_AbstrakteKlassen;
-
+//Frage 8: Es ist zwar eine Vererbte Klasse aber sie ist nicht sealed, daher kann man auch Methoden machen, welche nicht in der Oberen Klasse sind.
 class Program
 {
     static void Main()
     {
-        Car TimsCar = new Car()
+        Car timsCar = new Car()
         {
             Speed = 0, Gear = 1, AmountPassengers = 0, AmountSeats = 5, TankContent = 45, TankVolume = 100,
-            Owner = "Tim", Buildyear = 2021, Brand = "Volvo", BlinkerSetting = BlinkerSetting.off
+            Owner = "Tim", Buildyear = 2021, Brand = "Volvo", BlinkerSettings = BlinkerSetting.off
         };
-        Truck BobsTruck = new Truck()
+        Truck bobsTruck = new Truck()
         {
             Speed = 0, Gear = 1, Buildyear = 2021, LoadedWeight = 6, Owner = "Bob", Brand = "Volvo Truck",
-            TankContent = 595, TankVolume = 600, BlinkerSetting = BlinkerSetting.off
+            TankContent = 595, TankVolume = 600, BlinkerSettings = BlinkerSetting.off
         };
-        MotorBike JoshuasBike = new MotorBike()
+        MotorBike joshuasBike = new MotorBike()
         {
             Speed = 0, Gear = 1, TankContent = 40, TankVolume = 50, Buildyear = 2024, Brand = "Yamaha",
-            CurveInclination = 0, Owner = "Joshua", BlinkerSetting = BlinkerSetting.BlinkRight
+            CurveInclination = 0, Owner = "Joshua", BlinkerSettings = BlinkerSetting.BlinkRight
         };
-
-        Console.WriteLine(TimsCar.ToString());
+        Console.WriteLine(timsCar.ToString());
+        Console.WriteLine(bobsTruck.ToString());
+        Console.WriteLine(joshuasBike.ToString());
     }
     internal enum BlinkerSetting
     {
@@ -34,7 +35,7 @@ class Program
         
         public int Gear { get; set; }
         
-        public BlinkerSetting BlinkerSetting {get; set;}
+        public BlinkerSetting BlinkerSettings {get; set;}
         
         public string Owner { get; set; }
         
@@ -142,6 +143,11 @@ class Program
         {
             return "PKW";
         }
+
+        public override string ToString()
+        {
+            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount Of Passengers = {AmountPassengers}, Amount of Seats = {AmountSeats}, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
+        }
     }
 
     public class Truck : Vehicle
@@ -186,6 +192,10 @@ class Program
         {
             return "LKW";
         }
+        public override string ToString()
+        {
+            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount of Cargo Loaded = {LoadedWeight} t, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
+        }
     }
 
     class MotorBike : Vehicle
@@ -215,6 +225,10 @@ class Program
         public string GetTypeName()
         {
             return "Motorbike";
+        }
+        public override string ToString()
+        {
+            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Current Curve Inclination = {CurveInclination} %, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
         }
     }
 }
