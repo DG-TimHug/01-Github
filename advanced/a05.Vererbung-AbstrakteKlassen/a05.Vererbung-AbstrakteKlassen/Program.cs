@@ -61,12 +61,12 @@ public class Program
             }
         }
 
-        public void CarUpshift(int gear)
+        public void Upshift(int gear)
         {
             this.Gear += gear;
         }
 
-        public void CarDownshift(int gear)
+        public void Downshift(int gear)
         {
             this.Gear -= gear;
         }
@@ -153,9 +153,10 @@ public class Program
 
         public void Loading(int addedweight)
         {
-            if (LoadedWeight + addedweight >= 25)
+            if (addedweight >= 25)
             {
                 Console.WriteLine("Truck is Full!");
+                LoadedWeight = 25;
             }
             else
             {
@@ -163,15 +164,16 @@ public class Program
             }
         }
         
-        public void Unloading(int addedweight)
+        public void Unloading(int removedWeight)
         {
-            if (LoadedWeight <= 0)
+            if (removedWeight >= LoadedWeight)
             {
-                Console.WriteLine("Truck is Empty!");
+                Console.WriteLine("You cant remove more weight than there is in the truck!");
+                LoadedWeight = 0;
             }
             else
             {
-                LoadedWeight -= addedweight;
+                LoadedWeight -= removedWeight;
             }
         }
 

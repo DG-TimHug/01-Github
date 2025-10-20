@@ -37,7 +37,7 @@ public class UnitTestsCar
         var TestCar = new Program.Car();
         TestCar.Gear = 2;
         //Act
-        TestCar.CarUpshift(1);
+        TestCar.Upshift(1);
         var Result = TestCar.Gear;
         //Assert
         Assert.That(Result, Is.EqualTo(3), "Expected is 3");
@@ -50,7 +50,7 @@ public class UnitTestsCar
         var TestCar = new Program.Car();
         TestCar.Gear = 2;
         //Act
-        TestCar.CarDownshift(1);
+        TestCar.Downshift(1);
         var Result = TestCar.Gear;
         //Assert
         Assert.That(Result, Is.EqualTo(1), "Expected is 1");
