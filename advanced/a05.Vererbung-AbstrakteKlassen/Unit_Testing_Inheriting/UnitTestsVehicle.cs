@@ -1,6 +1,6 @@
 ﻿using a05.Vererbung_AbstrakteKlassen;
 namespace Unit_Testing_Inheriting;
-
+//Unit Tests no longer working due to class now being abstract
 public class Tests
 {
     [Test]

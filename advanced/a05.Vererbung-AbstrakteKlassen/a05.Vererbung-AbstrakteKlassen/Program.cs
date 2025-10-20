@@ -1,5 +1,6 @@
 ﻿namespace a05.Vererbung_AbstrakteKlassen;
-//Frage 8: Es ist zwar eine Vererbte Klasse aber sie ist nicht sealed, daher kann man auch Methoden machen, welche nicht in der Oberen Klasse sind.
+//Frage 8: Es ist zwar eine vererbte Klasse aber sie ist nicht sealed, daher kann man auch Methoden machen, welche nicht in der oberen Klasse sind.
+//Abstrakte Klassen: Die Unit-Tests sind nicht mehr gültig da ich Instanzen von der Klasse gemacht habe. Sie sind nicht mehr gültig, weil man keine Instanzen von abstrakten Klassen machen kann
 public class Program
 {
     static void Main()
@@ -7,16 +8,16 @@ public class Program
         Car timsCar = new Car()
         {
             Speed = 0, Gear = 1, AmountPassengers = 0, AmountSeats = 5, TankContent = 45, TankVolume = 100,
-            Owner = "Tim", Buildyear = 2021, Brand = "Volvo", BlinkerSettings = BlinkerSetting.off
+            Owner = "Tim", BuildYear = 2021, Brand = "Volvo", BlinkerSettings = BlinkerSetting.BlinkLeft
         };
         Truck bobsTruck = new Truck()
         {
-            Speed = 0, Gear = 1, Buildyear = 2021, LoadedWeight = 6, Owner = "Bob", Brand = "Volvo Truck",
-            TankContent = 595, TankVolume = 600, BlinkerSettings = BlinkerSetting.off
+            Speed = 0, Gear = 1, BuildYear = 2021, LoadedWeight = 6, Owner = "Bob", Brand = "Volvo Truck",
+            TankContent = 595, TankVolume = 600, BlinkerSettings = BlinkerSetting.Off
         };
         MotorBike joshuasBike = new MotorBike()
         {
-            Speed = 0, Gear = 1, TankContent = 40, TankVolume = 50, Buildyear = 2024, Brand = "Yamaha",
+            Speed = 0, Gear = 1, TankContent = 40, TankVolume = 50, BuildYear = 2024, Brand = "Yamaha",
             CurveInclination = 0, Owner = "Joshua", BlinkerSettings = BlinkerSetting.BlinkRight
         };
         Console.WriteLine(timsCar.ToString());
@@ -28,9 +29,9 @@ public class Program
     {
         BlinkLeft,
         BlinkRight,
-        off
+        Off
     }
-    public class Vehicle
+    public abstract class Vehicle
     {
         public int Speed { get; set; }
         
@@ -40,7 +41,7 @@ public class Program
         
         public string Owner { get; set; }
         
-        public int Buildyear { get; set; }
+        public int BuildYear { get; set; }
         
         public int TankVolume { get; set; }
         
@@ -50,40 +51,29 @@ public class Program
         
         public void Accelerate()
         {
-            this.Speed++;
+            Speed++;
         }
 
         public void Decelerate()
         {
-            if (this.Speed > 0)
+            if (Speed > 0)
             {
-                this.Speed--;
+                Speed--;
             }
         }
 
         public void Upshift(int gear)
         {
-            this.Gear += gear;
+            Gear += gear;
         }
 
         public void Downshift(int gear)
         {
-            this.Gear -= gear;
+            Gear -= gear;
         }
-
-        public void Blinker()
-        {
-            //?
-        }
-
         public void RefuelCar(int liter)
         {
-            this.TankContent += liter;
-        }
-
-        public string GetTypeName()
-        {
-            return null;
+           TankContent += liter;
         }
     }
 
@@ -133,7 +123,7 @@ public class Program
 
         public override string ToString()
         {
-            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount Of Passengers = {AmountPassengers}, Amount of Seats = {AmountSeats}, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
+            return $"Current Stats: Owner = {Owner}, Build year and Car Brand = {BuildYear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount Of Passengers = {AmountPassengers}, Amount of Seats = {AmountSeats}, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
         }
     }
 
@@ -151,16 +141,16 @@ public class Program
             Speed -= 2;
         }
 
-        public void Loading(int addedweight)
+        public void Loading(int addedWeight)
         {
-            if (addedweight >= 25)
+            if (addedWeight >= 25)
             {
                 Console.WriteLine("Truck is Full!");
                 LoadedWeight = 25;
             }
             else
             {
-                LoadedWeight += addedweight;
+                LoadedWeight += addedWeight;
             }
         }
         
@@ -183,7 +173,7 @@ public class Program
         }
         public override string ToString()
         {
-            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount of Cargo Loaded = {LoadedWeight} t, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
+            return $"Current Stats: Owner = {Owner}, Build year and Car Brand = {BuildYear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Amount of Cargo Loaded = {LoadedWeight} t, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
         }
     }
 
@@ -217,7 +207,7 @@ public class Program
         }
         public override string ToString()
         {
-            return $"Current Stats: Owner = {Owner}, Buildyear and Car Brand = {Buildyear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Current Curve Inclination = {CurveInclination} %, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
+            return $"Current Stats: Owner = {Owner}, Build-year and Car Brand = {BuildYear}, {Brand}, Speed = {Speed} Km/h, Gear = {Gear}, Current Curve Inclination = {CurveInclination} %, How much Fuel is in the Car? = {TankContent} / {TankVolume}l, Blinkersetting = {BlinkerSettings}";
         }
     }
 }
