@@ -201,12 +201,12 @@ public class Program
             Speed -= 6;
         }
 
-        public void Left()
+        public void LeanLeft()
         {
-            CurveInclination -= -2;
+            CurveInclination += -2;
         }
 
-        public void Right()
+        public void LeanRight()
         {
             CurveInclination += +2;
         }
