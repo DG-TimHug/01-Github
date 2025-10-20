@@ -102,7 +102,7 @@ public class Program
             Speed -= 4;
         }
 
-        public void PassengerEnterCar()
+        public void EmbarkPassengers()
         {
             if (AmountPassengers <= AmountSeats)
             {
@@ -114,7 +114,7 @@ public class Program
             }
         }
 
-        public void PassengerExitCar()
+        public void DisembarkPassengers()
         {
             if (AmountPassengers >= AmountSeats)
             {
