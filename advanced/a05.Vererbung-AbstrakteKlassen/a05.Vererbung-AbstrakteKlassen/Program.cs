@@ -7,7 +7,7 @@ class Program
 
     
     }
-    public class Fahrzeug
+    public class Vehicle
     {
         public int Speed { get; protected set; }
         
@@ -58,6 +58,66 @@ class Program
             {
                 Gear--;
             }
+        }
+
+        public void Blinker()
+        {
+            //?
+        }
+
+        public void RefuelCar(int liter)
+        {
+            this.TankContent += liter;
+        }
+
+        public string GetTypeName()
+        {
+            return null;
+        }
+    }
+
+    class Car : Vehicle
+    {
+        public int AmountSeats { get; protected set; }
+        public int AmountPassengers { get; protected set; }
+
+        public void accelerate()
+        {
+            Speed += 4;
+        }
+
+        public void decelerate()
+        {
+            Speed -= 4;
+        }
+
+        public void PassengerEnterCar()
+        {
+            if (AmountPassengers <= AmountSeats)
+            {
+                AmountPassengers++;
+            }
+            else
+            {
+                Console.WriteLine("Car is Full!");
+            }
+        }
+
+        public void PassengerExitCar()
+        {
+            if (AmountPassengers >= AmountSeats)
+            {
+                AmountPassengers--;
+            }
+            else
+            {
+                Console.WriteLine("Car is already Empty!");
+            }
+        }
+
+        public string GetTypeName()
+        {
+            return "PKW";
         }
     }
 }
