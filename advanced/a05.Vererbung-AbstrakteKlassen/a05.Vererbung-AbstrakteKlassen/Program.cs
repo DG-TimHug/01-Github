@@ -120,4 +120,48 @@ class Program
             return "PKW";
         }
     }
+
+    public class Truck : Vehicle
+    {
+        public int LoadedWeight { get; protected set; }
+        
+        public void accelerate()
+        {
+            Speed += 2;
+        }
+
+        public void decelerate()
+        {
+            Speed -= 2;
+        }
+
+        public void Loading(int Addedweight)
+        {
+            if (LoadedWeight + Addedweight >= 25)
+            {
+                Console.WriteLine("Truck is Full!");
+            }
+            else
+            {
+                LoadedWeight += Addedweight;
+            }
+        }
+        
+        public void unloading(int Addedweight)
+        {
+            if (LoadedWeight <= 0)
+            {
+                Console.WriteLine("Truck is Empty!");
+            }
+            else
+            {
+                LoadedWeight -= Addedweight;
+            }
+        }
+
+        public string GetTypeName()
+        {
+            return "LKW";
+        }
+    }
 }
