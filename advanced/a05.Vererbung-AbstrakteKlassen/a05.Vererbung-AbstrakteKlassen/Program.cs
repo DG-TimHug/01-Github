@@ -4,24 +4,47 @@ class Program
 {
     static void Main()
     {
+        Car TimsCar = new Car()
+        {
+            Speed = 0, Gear = 1, AmountPassengers = 0, AmountSeats = 5, TankContent = 45, TankVolume = 100,
+            Owner = "Tim", Buildyear = 2021, Brand = "Volvo", BlinkerSetting = BlinkerSetting.off
+        };
+        Truck BobsTruck = new Truck()
+        {
+            Speed = 0, Gear = 1, Buildyear = 2021, LoadedWeight = 6, Owner = "Bob", Brand = "Volvo Truck",
+            TankContent = 595, TankVolume = 600, BlinkerSetting = BlinkerSetting.off
+        };
+        MotorBike JoshuasBike = new MotorBike()
+        {
+            Speed = 0, Gear = 1, TankContent = 40, TankVolume = 50, Buildyear = 2024, Brand = "Yamaha",
+            CurveInclination = 0, Owner = "Joshua", BlinkerSetting = BlinkerSetting.BlinkRight
+        };
 
-    
+        Console.WriteLine(TimsCar.ToString());
+    }
+    internal enum BlinkerSetting
+    {
+        BlinkLeft,
+        BlinkRight,
+        off
     }
     public class Vehicle
     {
-        public int Speed { get; protected set; }
+        public int Speed { get; set; }
         
-        public int Gear { get; protected set; }
+        public int Gear { get; set; }
         
-        public string BlinkerSetting {get; protected set;}
+        public BlinkerSetting BlinkerSetting {get; set;}
         
-        public string Owner { get; protected set; }
+        public string Owner { get; set; }
         
-        public int Buildyear { get; protected set; }
+        public int Buildyear { get; set; }
         
-        public int Tankvolume { get; protected set; }
+        public int TankVolume { get; set; }
         
-        public int TankContent { get; protected set; }
+        public int TankContent { get; set; }
+        
+        public string Brand { get; set; }
         
         public void Accelerate()
         {
@@ -78,8 +101,8 @@ class Program
 
     class Car : Vehicle
     {
-        public int AmountSeats { get; protected set; }
-        public int AmountPassengers { get; protected set; }
+        public int AmountSeats { get; set; }
+        public int AmountPassengers { get; set; }
 
         public void Accelerate()
         {
@@ -123,7 +146,7 @@ class Program
 
     public class Truck : Vehicle
     {
-        public int LoadedWeight { get; protected set; }
+        public int LoadedWeight { get; set; }
         
         public void Accelerate()
         {
@@ -167,7 +190,7 @@ class Program
 
     class MotorBike : Vehicle
     {
-        public int CurveInclination { get; protected set; }
+        public int CurveInclination { get; set; }
         
         public void Accelerate()
         {
