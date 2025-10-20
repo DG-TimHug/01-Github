@@ -1,6 +1,6 @@
 ﻿namespace a05.Vererbung_AbstrakteKlassen;
 //Frage 8: Es ist zwar eine Vererbte Klasse aber sie ist nicht sealed, daher kann man auch Methoden machen, welche nicht in der Oberen Klasse sind.
-class Program
+public class Program
 {
     static void Main()
     {
@@ -23,7 +23,8 @@ class Program
         Console.WriteLine(bobsTruck.ToString());
         Console.WriteLine(joshuasBike.ToString());
     }
-    internal enum BlinkerSetting
+
+    public enum BlinkerSetting
     {
         BlinkLeft,
         BlinkRight,
@@ -60,28 +61,14 @@ class Program
             }
         }
 
-        public void GearShifterUp(int gear)
+        public void CarUpshift(int gear)
         {
-            if (gear >= 8)
-            {
-                
-            }
-            else
-            {
-                gear++;
-            }
+            this.Gear += gear;
         }
 
-        public void GearShifterDown(int gear)
+        public void CarDownshift(int gear)
         {
-            if (gear <= -1)
-            {
-                
-            }
-            else
-            {
-                gear--;
-            }
+            this.Gear -= gear;
         }
 
         public void Blinker()
@@ -100,7 +87,7 @@ class Program
         }
     }
 
-    class Car : Vehicle
+    public class Car : Vehicle
     {
         public int AmountSeats { get; set; }
         public int AmountPassengers { get; set; }
@@ -198,7 +185,7 @@ class Program
         }
     }
 
-    class MotorBike : Vehicle
+    public class MotorBike : Vehicle
     {
         public int CurveInclination { get; set; }
         

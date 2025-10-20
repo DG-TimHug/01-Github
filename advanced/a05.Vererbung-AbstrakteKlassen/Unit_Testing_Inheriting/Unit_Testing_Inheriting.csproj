@@ -20,4 +20,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\a05.Vererbung-AbstrakteKlassen\a05.Vererbung-AbstrakteKlassen.csproj" />
+    </ItemGroup>
+
 </Project>
