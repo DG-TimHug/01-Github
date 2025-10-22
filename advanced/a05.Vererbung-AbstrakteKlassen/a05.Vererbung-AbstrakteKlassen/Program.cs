@@ -73,7 +73,11 @@ public class Program
         }
         public void RefuelCar(int liter)
         {
-           TankContent += liter;
+            if (TankContent + liter >= TankVolume)
+            {
+                Console.WriteLine("Tank is full");
+            }
+            TankContent += liter;
         }
     }
 
