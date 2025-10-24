@@ -7,74 +7,74 @@ public class UnitTestsMotorbike
     public void TestIfMotorbikeCanAccelerate()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
+        var testMotorbike = new Program.MotorBike();
         //Act
-        TestMotorbike.Accelerate();
-        var Result = TestMotorbike.Speed;
+        testMotorbike.Accelerate();
+        var result = testMotorbike.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(6), "Expected is 6");
+        Assert.That(result, Is.EqualTo(6), "Expected is 6");
     }
 
     [Test]
     public void TestIfMotorbikeCanDecelerate()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
-        TestMotorbike.Speed = 6;
+        var testMotorbike = new Program.MotorBike();
+        testMotorbike.Speed = 6;
         //Act
-        TestMotorbike.Decelerate();
-        var Result = TestMotorbike.Speed;
+        testMotorbike.Decelerate();
+        var result = testMotorbike.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
     }
 
     [Test]
     public void TestIfMotorbikeCanUpshift()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
-        TestMotorbike.Gear = 2;
+        var testMotorbike = new Program.MotorBike();
+        testMotorbike.Gear = 2;
         //Act
-        TestMotorbike.Upshift(1);
-        var Result = TestMotorbike.Gear;
+        testMotorbike.Shift(1);
+        var result = testMotorbike.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(3), "Expected is 3");
+        Assert.That(result, Is.EqualTo(3), "Expected is 3");
     }
 
     [Test]
     public void TestIfMotorbikeCanDownshift()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
-        TestMotorbike.Gear = 2;
+        var testMotorbike = new Program.MotorBike();
+        testMotorbike.Gear = 2;
         //Act
-        TestMotorbike.Downshift(1);
-        var Result = TestMotorbike.Gear;
+        testMotorbike.Shift(-1);
+        var result = testMotorbike.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
     
     [Test]
     public void TestIfMotorbikeCanLeanLeft()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
+        var testMotorbike = new Program.MotorBike();
         //Act
-        TestMotorbike.LeanLeft();
-        var Result = TestMotorbike.CurveInclination;
+        testMotorbike.LeanLeft();
+        var result = testMotorbike.CurveInclination;
         //Assert
-        Assert.That(Result, Is.EqualTo(-2), "Expected is -2");
+        Assert.That(result, Is.EqualTo(-2), "Expected is -2");
     }
     
     [Test]
     public void TestIfMotorbikeCanLeanRight()
     {
         //Arrange
-        var TestMotorbike = new Program.MotorBike();
+        var testMotorbike = new Program.MotorBike();
         //Act
-        TestMotorbike.LeanRight();
-        var Result = TestMotorbike.CurveInclination;
+        testMotorbike.LeanRight();
+        var result = testMotorbike.CurveInclination;
         //Assert
-        Assert.That(Result, Is.EqualTo(2), "Expected is 2");
+        Assert.That(result, Is.EqualTo(2), "Expected is 2");
     }
 }

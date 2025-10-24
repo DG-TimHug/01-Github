@@ -7,75 +7,77 @@ public class UnitTestTrucks
     public void TestIfTruckCanAccelerate()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
+        var testTruck = new Program.Truck();
         //Act
-        TestTruck.Accelerate();
-        var Result = TestTruck.Speed;
+        testTruck.Accelerate();
+        var result = testTruck.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(2), "Expected is 2");
+        Assert.That(result, Is.EqualTo(2), "Expected is 2");
     }
 
     [Test]
     public void TestIfTruckCanDecelerate()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
-        TestTruck.Speed = 2;
+        var testTruck = new Program.Truck();
+        testTruck.Speed = 2;
         //Act
-        TestTruck.Decelerate();
-        var Result = TestTruck.Speed;
+        testTruck.Decelerate();
+        var result = testTruck.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
     }
 
     [Test]
     public void TestIfTruckCanUpshift()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
-        TestTruck.Gear = 2;
+        var testTruck = new Program.Truck();
+        testTruck.Gear = 2;
         //Act
-        TestTruck.Upshift(1);
-        var Result = TestTruck.Gear;
+        testTruck.Shift(1);
+        var result = testTruck.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(3), "Expected is 3");
+        Assert.That(result, Is.EqualTo(3), "Expected is 3");
     }
 
     [Test]
     public void TestIfTruckCanDownshift()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
-        TestTruck.Gear = 2;
+        var testTruck = new Program.Truck();
+        testTruck.Gear = 2;
         //Act
-        TestTruck.Downshift(1);
-        var Result = TestTruck.Gear;
+        testTruck.Shift(-1);
+        var result = testTruck.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
     
     [Test]
     public void TestIfTruckCanLoadCargo()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
+        var testTruck = new Program.Truck();
         //Act
-        TestTruck.Loading(16);
-        var Result = TestTruck.LoadedWeight;
+        testTruck.Loading(16);
+        var result = testTruck.LoadedWeight;
         //Assert
-        Assert.That(Result, Is.EqualTo(16), "Expected is 16");
+        Assert.That(result, Is.EqualTo(16), "Expected is 16");
     }
     
     [Test]
     public void TestIfTruckCanUnloadCargo()
     {
         //Arrange
-        var TestTruck = new Program.Truck();
-        TestTruck.LoadedWeight = 15;
+        var testTruck = new Program.Truck();
+        testTruck.LoadedWeight = 15;
         //Act
-        TestTruck.Unloading(16);
-        var Result = TestTruck.LoadedWeight;
+        testTruck.Unloading(15);
+        var result = testTruck.LoadedWeight;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
+        
+        //Fails on purpose
     }
 }

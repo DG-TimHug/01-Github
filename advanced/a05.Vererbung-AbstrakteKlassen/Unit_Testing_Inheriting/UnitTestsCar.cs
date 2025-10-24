@@ -9,75 +9,76 @@ public class UnitTestsCar
     public void TestIfCarCanAccelerate()
     {
         //Arrange
-        var TestCar = new Program.Car();
+        var testCar = new Program.Car();
         //Act
-        TestCar.Accelerate();
-        var Result = TestCar.Speed;
+        testCar.Accelerate();
+        var result = testCar.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(4), "Expected is 4");
+        Assert.That(result, Is.EqualTo(4), "Expected is 4");
     }
 
     [Test]
     public void TestIfCarCanDecelerate()
     {
         //Arrange
-        var TestCar = new Program.Car();
-        TestCar.Speed = 4;
+        var testCar = new Program.Car();
+        testCar.Speed = 4;
         //Act
-        TestCar.Decelerate();
-        var Result = TestCar.Speed;
+        testCar.Decelerate();
+        var result = testCar.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
     }
 
     [Test]
     public void TestIfCarCanUpshift()
     {
         //Arrange
-        var TestCar = new Program.Car();
-        TestCar.Gear = 2;
+        var testCar = new Program.Car();
+        testCar.Gear = 2;
         //Act
-        TestCar.Upshift(1);
-        var Result = TestCar.Gear;
+        testCar.Shift(1);
+        var result = testCar.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(3), "Expected is 3");
+        Assert.That(result, Is.EqualTo(3), "Expected is 3");
     }
 
     [Test]
     public void TestIfCarCanDownshift()
     {
         //Arrange
-        var TestCar = new Program.Car();
-        TestCar.Gear = 2;
+        var testCar = new Program.Car();
+        testCar.Gear = 2;
         //Act
-        TestCar.Downshift(1);
-        var Result = TestCar.Gear;
+        testCar.Shift(-1);
+        var result = testCar.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
     
     [Test]
     public void TestIfCarCanEmbarkPassengers()
     {
         //Arrange
-        var TestCar = new Program.Car();
+        var testCar = new Program.Car();
+        testCar.AmountSeats = 5;
         //Act
-        TestCar.EmbarkPassengers();
-        var Result = TestCar.AmountPassengers;
+        testCar.EmbarkPassengers();
+        var result = testCar.AmountPassengers;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
     
     [Test]
     public void TestIfCarCanDisembarkPassengers()
     {
         //Arrange
-        var TestCar = new Program.Car();
-        TestCar.AmountPassengers = 1;
+        var testCar = new Program.Car();
+        testCar.AmountPassengers = 1;
         //Act
-        TestCar.DisembarkPassengers();
-        var Result = TestCar.AmountPassengers;
+        testCar.DisembarkPassengers();
+        var result = testCar.AmountPassengers;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
     }
 }

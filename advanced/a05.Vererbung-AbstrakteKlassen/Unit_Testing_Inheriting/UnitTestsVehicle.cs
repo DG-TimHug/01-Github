@@ -7,49 +7,49 @@ public class Tests
     public void TestIfVehicleCanAccelerate()
     {
         //Arrange
-        var TestVehicle = new Program.Vehicle();
+        var testVehicle = new Program.Vehicle();
         //Act
-        TestVehicle.Accelerate();
-        var Result = TestVehicle.Speed;
+        testVehicle.Accelerate();
+        var result = testVehicle.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
     
     [Test]
     public void TestIfVehicleCanDecelerate()
     {
         //Arrange
-        var TestVehicle = new Program.Vehicle();
-        TestVehicle.Speed = 1;
+        var testVehicle = new Program.Vehicle();
+        testVehicle.Speed = 1;
         //Act
-        TestVehicle.Decelerate();
-        var Result = TestVehicle.Speed;
+        testVehicle.Decelerate();
+        var result = testVehicle.Speed;
         //Assert
-        Assert.That(Result, Is.EqualTo(0), "Expected is 0");
+        Assert.That(result, Is.EqualTo(0), "Expected is 0");
     }
     [Test]
     public void TestIfVehicleCanUpshift()
     {
         //Arrange
-        var TestVehicle = new Program.Vehicle();
-        TestVehicle.Gear = 2;
+        var testVehicle = new Program.Vehicle();
+        testVehicle.Gear = 2;
         //Act
-        TestVehicle.Upshift(1);
-        var Result = TestVehicle.Gear;
+        testVehicle.Shift(1);
+        var result = testVehicle.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(3), "Expected is 3");
+        Assert.That(result, Is.EqualTo(3), "Expected is 3");
     }
     
     [Test]
     public void TestIfVehicleCanDownshift()
     {
         //Arrange
-        var TestVehicle = new Program.Vehicle();
-        TestVehicle.Gear = 2;
+        var testVehicle = new Program.Vehicle();
+        testVehicle.Gear = 2;
         //Act
-        TestVehicle.Downshift(1);
-        var Result = TestVehicle.Gear;
+        testVehicle.Shift(-1);
+        var result = testVehicle.Gear;
         //Assert
-        Assert.That(Result, Is.EqualTo(1), "Expected is 1");
+        Assert.That(result, Is.EqualTo(1), "Expected is 1");
     }
 }
